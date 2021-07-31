@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 type TimelineProps = {
     tag?: string,
-    className?: string,
-    children?: PropTypes.object,
+    className ?: string,
+    children ?: PropTypes.object,
 };
 
 /**

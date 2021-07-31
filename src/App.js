@@ -28,8 +28,7 @@ type AppProps = {};
 
 /**
  * Main app component
- */
-// 안녕하세요 저는 최문봉입니다.
+*/
 class App extends Component<AppProps> {
     render() {
         return <Routes></Routes>;

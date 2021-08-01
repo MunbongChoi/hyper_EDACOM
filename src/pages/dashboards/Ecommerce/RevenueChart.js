@@ -121,7 +121,7 @@ const RevenueChart = () => {
                     <h5>총 데이터 사용량: X+Y</h5>
                     <p className="text-muted font-13 mb-3 mt-2">
                         Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-                        rhoncus...
+                        rhoncus....
                     </p>
                     <a href="/" className="btn btn-outline-primary">
                         View Statements

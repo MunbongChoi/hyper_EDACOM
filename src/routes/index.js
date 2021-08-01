@@ -13,7 +13,7 @@ const Register = React.lazy(() => import('../pages/auth/Register'));
 const ForgetPassword = React.lazy(() => import('../pages/auth/ForgetPassword'));
 const Confirm = React.lazy(() => import('../pages/auth/Confirm'));
 // dashboard
-const Dashboard2 = React.lazy(()=> import('./views/dashboards/dashboard2'))
+// const Dashboard2 = React.lazy(()=> import('./views/dashboards/dashboard2'))
 const EcommerceDashboard = React.lazy(() => import('../pages/dashboards/Ecommerce'));
 const CRMDashboard = React.lazy(() => import('../pages/dashboards/CRM'));
 const AnalyticsDashboard = React.lazy(() => import('../pages/dashboards/Analytics'));

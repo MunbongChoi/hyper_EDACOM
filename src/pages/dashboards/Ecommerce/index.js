@@ -35,12 +35,12 @@ const EcommerceDashboardPage = () => {
             </Row>
 
             <Row>
-                <Col xl={9}>
-                    <RevenueChart />
-                </Col>
-                <Col xl={3}>
-                    <SalesChart />
-                </Col>
+                    <Col xl={12}>
+                        <RevenueChart />
+                    </Col>
+                {/*<Col xl={3}>*/}
+                {/*    <SalesChart />*/}
+                {/*</Col>*/}
             </Row>
 
             <Row>

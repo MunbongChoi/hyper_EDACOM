@@ -47,7 +47,6 @@ const EcommerceDashboardPage = () => {
                 <Col xl={5}>
                     <Statistics />
                 </Col>
-
                 <Col xl={7}>
                     <PerformanceChart />
                 </Col>

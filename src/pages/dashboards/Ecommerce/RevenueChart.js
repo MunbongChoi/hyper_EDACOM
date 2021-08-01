@@ -100,18 +100,18 @@ const RevenueChart = () => {
                 <div className="chart-content-bg">
                     <Row className="text-center">
                         <Col className="col-md-6">
-                            <p className="text-muted mb-0 mt-3">Current Week</p>
+                            <p className="text-muted mb-0 mt-3">작일 총 전력 사용량</p>
                             <h2 className="font-weight-normal mb-3">
                                 <small className="mdi mdi-checkbox-blank-circle text-primary align-middle mr-1"></small>
-                                <span>$58,254</span>
+                                <span>X[kWh]</span>
                             </h2>
                         </Col>
 
                         <Col className="col-md-6">
-                            <p className="text-muted mb-0 mt-3">Previous Week</p>
+                            <p className="text-muted mb-0 mt-3">금일 총 전력사용량</p>
                             <h2 className="font-weight-normal mb-3">
                                 <small className="mdi mdi-checkbox-blank-circle text-success align-middle mr-1"></small>
-                                <span>$69,524</span>
+                                <span>Y[kWh]</span>
                             </h2>
                         </Col>
                     </Row>

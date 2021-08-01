@@ -8,6 +8,7 @@ import germanyFlag from './flags/germany.jpg';
 import italyFlag from './flags/italy.jpg';
 import spainFlag from './flags/spain.jpg';
 import russiaFlag from './flags/russia.jpg';
+import koreaFlag from './flags/korea.jpg';
 
 const Languages = [
     {
@@ -30,6 +31,10 @@ const Languages = [
         name: 'Russian',
         flag: russiaFlag,
     },
+    {
+        name : 'Korean',
+        flag : koreaFlag,
+    }
 ];
 
 type LanguageDropdownProps = {};

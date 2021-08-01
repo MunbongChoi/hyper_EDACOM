@@ -35,16 +35,6 @@ const EcommerceDashboardPage = () => {
             </Row>
 
             <Row>
-                <Col xl={5}>
-                    <Statistics />
-                </Col>
-
-                <Col xl={7}>
-                    <PerformanceChart />
-                </Col>
-            </Row>
-
-            <Row>
                 <Col xl={9}>
                     <RevenueChart />
                 </Col>
@@ -54,13 +44,24 @@ const EcommerceDashboardPage = () => {
             </Row>
 
             <Row>
-                <Col xl={3}>
-                    <Activity />
+                <Col xl={5}>
+                    <Statistics />
                 </Col>
-                <Col>
-                    <Products />
+
+                <Col xl={7}>
+                    <PerformanceChart />
                 </Col>
             </Row>
+
+            {/*<Row>*/}
+            {/*    <Col xl={3}>*/}
+            {/*        <Activity />*/}
+            {/*    </Col>*/}
+            {/*    <Col>*/}
+            {/*        <Products />*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
+
         </React.Fragment>
     );
 };

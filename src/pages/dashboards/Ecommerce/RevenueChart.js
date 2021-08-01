@@ -118,7 +118,7 @@ const RevenueChart = () => {
                 </div>
 
                 <div className="dash-item-overlay d-none d-md-block">
-                    <h5>Today's Earning: $2,562.30</h5>
+                    <h5>총 데이터 사용량: X+Y</h5>
                     <p className="text-muted font-13 mb-3 mt-2">
                         Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
                         rhoncus...

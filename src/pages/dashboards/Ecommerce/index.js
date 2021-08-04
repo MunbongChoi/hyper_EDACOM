@@ -2,10 +2,12 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
 
+import Statistics2 from './Statistics2';
 import HyperDatepicker from '../../../components/Datepicker';
 import Statistics from './Statistics';
 import PerformanceChart from './PerformanceChart';
 import RevenueChart from './RevenueChart';
+import LineChart from '../../charts/Brite/LineChart.js'
 import SalesChart from './SalesChart';
 import Activity from './Activity';
 import Products from './Products';
@@ -35,22 +37,35 @@ const EcommerceDashboardPage = () => {
             </Row>
 
             <Row>
-                    <Col xl={12}>
-                        <RevenueChart />
-                    </Col>
+                <Col xl={12}>
+                    <RevenueChart />
+                </Col>
+
+                {/*<Col xl={4}>*/}
+                {/*    <Statistics />*/}
+                {/*</Col>*/}
                 {/*<Col xl={3}>*/}
                 {/*    <SalesChart />*/}
                 {/*</Col>*/}
             </Row>
 
             <Row>
-                <Col xl={5}>
-                    <Statistics />
-                </Col>
                 <Col xl={7}>
                     <PerformanceChart />
                 </Col>
+                <Col xl={5}>
+                    <Statistics />
+                    {/*<Statistics2 />*/}
+                </Col>
             </Row>
+            {/*<Row>*/}
+            {/*    /!*<Col xl={5}>*!/*/}
+            {/*    /!*    <Statistics />*!/*/}
+            {/*    /!*</Col>*!/*/}
+            {/*    <Col xl={7}>*/}
+            {/*        <LineChart/>*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
 
             {/*<Row>*/}
             {/*    <Col xl={3}>*/}

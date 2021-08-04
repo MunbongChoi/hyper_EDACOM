@@ -40,7 +40,7 @@ const RevenueChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            width: 4,
+            width: 2,
         },
         zoom: {
             enabled: false,
@@ -51,7 +51,7 @@ const RevenueChart = () => {
         colors: ['#727cf5', '#0acf97', '#fa5c7c', '#ffbc00'],
         xaxis: {
             type: 'string',
-            categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            categories: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'],
             tooltip: {
                 enabled: false,
             },
@@ -71,12 +71,12 @@ const RevenueChart = () => {
     const apexLineChartWithLablesData = [
         {
             name: 'Current Week',
-            data: [10, 20, 15, 25, 20, 30, 20],
+            data: [10, 20, 15, 25, 20, 30, 20, 10, 20, 15, 25, 20, 30, 30],
         },
-        {
-            name: 'Previous Week',
-            data: [0, 15, 10, 30, 15, 35, 25],
-        },
+        // {
+        //     name: 'Previous Week',
+        //     data: [10, 20, 15, 25, 20, 30, 20, 10, 20, 15, 25, 20, 30, 30],
+        // },
     ];
 
     return (
@@ -95,38 +95,38 @@ const RevenueChart = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">Revenue</h4>
+                <h4 className="header-title mb-3">금일 전력 사용량</h4>
 
-                <div className="chart-content-bg">
-                    <Row className="text-center">
-                        <Col className="col-md-6">
-                            <p className="text-muted mb-0 mt-3">작일 총 전력 사용량</p>
-                            <h2 className="font-weight-normal mb-3">
-                                <small className="mdi mdi-checkbox-blank-circle text-primary align-middle mr-1"></small>
-                                <span>X[kWh]</span>
-                            </h2>
-                        </Col>
+                {/*<div className="chart-content-bg">*/}
+                {/*    <Row className="text-center">*/}
+                {/*        <Col className="col-md-6">*/}
+                {/*            <p className="text-muted mb-0 mt-3">금일 총 전력 사용량</p>*/}
+                {/*            <h2 className="font-weight-normal mb-3">*/}
+                {/*                <small className="mdi mdi-checkbox-blank-circle text-primary align-middle mr-1"></small>*/}
+                {/*                <span>X[kWh]</span>*/}
+                {/*            </h2>*/}
+                {/*        </Col>*/}
 
-                        <Col className="col-md-6">
-                            <p className="text-muted mb-0 mt-3">금일 총 전력사용량</p>
-                            <h2 className="font-weight-normal mb-3">
-                                <small className="mdi mdi-checkbox-blank-circle text-success align-middle mr-1"></small>
-                                <span>Y[kWh]</span>
-                            </h2>
-                        </Col>
-                    </Row>
-                </div>
+                {/*        /!*<Col className="col-md-6">*!/*/}
+                {/*        /!*    <p className="text-muted mb-0 mt-3">금일 총 전력사용량</p>*!/*/}
+                {/*        /!*    <h2 className="font-weight-normal mb-3">*!/*/}
+                {/*        /!*        <small className="mdi mdi-checkbox-blank-circle text-success align-middle mr-1"></small>*!/*/}
+                {/*        /!*        <span>Y[kWh]</span>*!/*/}
+                {/*        /!*    </h2>*!/*/}
+                {/*        /!*</Col>*!/*/}
+                {/*    </Row>*/}
+                {/*</div>*/}
 
                 <div className="dash-item-overlay d-none d-md-block">
-                    <h5>총 데이터 사용량: X+Y</h5>
-                    <p className="text-muted font-13 mb-3 mt-2">
-                        Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
-                        rhoncus....
-                    </p>
-                    <a href="/" className="btn btn-outline-primary">
-                        View Statements
-                        <i className="mdi mdi-arrow-right ml-2"></i>
-                    </a>
+                    <h5>총 데이터 사용량 : X</h5>
+                    {/*<p className="text-muted font-13 mb-3 mt-2">*/}
+                    {/*    Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam*/}
+                    {/*    rhoncus....*/}
+                    {/*</p>*/}
+                    {/*<a href="/" className="btn btn-outline-primary">*/}
+                    {/*    View Statements*/}
+                    {/*    <i className="mdi mdi-arrow-right ml-2"></i>*/}
+                    {/*</a>*/}
                 </div>
 
                 <Chart

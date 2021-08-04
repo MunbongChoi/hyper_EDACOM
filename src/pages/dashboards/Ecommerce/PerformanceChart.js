@@ -42,7 +42,7 @@ const PerformanceChart = () => {
         },
         colors: ['#727cf5', '#e3eaef'],
         xaxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            categories: ['TOU', '누진세'],
             axisBorder: {
                 show: false,
             },
@@ -60,7 +60,7 @@ const PerformanceChart = () => {
         tooltip: {
             y: {
                 formatter: function(val) {
-                    return '$' + val + 'k';
+                    return '₩' + val + 'k';
                 },
             },
         },
@@ -69,11 +69,11 @@ const PerformanceChart = () => {
     const apexBarChartData = [
         {
             name: 'Actual',
-            data: [65, 59, 80, 81, 56, 89, 40, 32, 65, 59, 80, 81],
+            data: [65, 59],
         },
         {
             name: 'Projection',
-            data: [89, 40, 32, 65, 59, 80, 81, 56, 89, 40, 65, 59],
+            data: [89, 80],
         },
     ];
 
@@ -93,7 +93,7 @@ const PerformanceChart = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">Projections Vs Actuals</h4>
+                <h4 className="header-title mb-3">금일 요금제 비교 서비스</h4>
 
                 <Chart
                     options={apexBarChartOpts}

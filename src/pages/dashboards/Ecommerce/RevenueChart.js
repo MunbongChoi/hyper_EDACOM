@@ -40,7 +40,7 @@ const RevenueChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            width: 2,
+            width: 4,
         },
         zoom: {
             enabled: false,
@@ -48,7 +48,7 @@ const RevenueChart = () => {
         legend: {
             show: false,
         },
-        colors: ['#727cf5', '#0acf97', '#fa5c7c', '#ffbc00'],
+        colors: ['#8ca4d2', '#0acf97', '#fa5c7c', '#ffbc00'],
         xaxis: {
             type: 'string',
             categories: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'],
@@ -62,7 +62,7 @@ const RevenueChart = () => {
         yaxis: {
             labels: {
                 formatter: function(val) {
-                    return val + 'k';
+                    return val + 'kWh';
                 },
             },
         },
@@ -118,7 +118,7 @@ const RevenueChart = () => {
                 {/*</div>*/}
 
                 <div className="dash-item-overlay d-none d-md-block">
-                    <h5>총 데이터 사용량 : X</h5>
+                    {/*<h5>금일 현재까지의 전력사용량 : X</h5>*/}
                     {/*<p className="text-muted font-13 mb-3 mt-2">*/}
                     {/*    Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam*/}
                     {/*    rhoncus....*/}

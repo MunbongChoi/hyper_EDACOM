@@ -3,13 +3,8 @@ import React from 'react';
 import Chart from 'react-apexcharts';
 import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-const TasksChart = () => {
-    var categories = [];
-    for (var i = 1; i <= 12; i++) {
-        categories.push( i + '월');
-    }
-
-    const apexOpts = {
+const PerformanceChart = () => {
+    const apexBarChartOpts = {
         grid: {
             padding: {
                 left: 0,
@@ -17,7 +12,7 @@ const TasksChart = () => {
             },
         },
         chart: {
-            height: 150,
+            height: 260,
             type: 'bar',
             stacked: true,
             parentHeightOffset: 0,
@@ -28,19 +23,16 @@ const TasksChart = () => {
         plotOptions: {
             bar: {
                 horizontal: false,
-                columnWidth: '30%',
-                dataLabels: {
-                    position: 'top', // top, center, bottom
-                },
+                columnWidth: '20%',
             },
         },
         dataLabels: {
-            enabled: true,
-            offsetY: -24,
-            style: {
-                fontSize: '12px',
-                colors: ['#98a6ad'],
-            },
+            enabled: false,
+        },
+        stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent'],
         },
         zoom: {
             enabled: false,
@@ -48,48 +40,41 @@ const TasksChart = () => {
         legend: {
             show: false,
         },
-        colors: ['#727cf5'],
+        colors: ['#bacd59', '#e3eaef'],
         xaxis: {
-            categories: categories,
-            axisTicks: {
-                show: false,
-            },
+            categories: ['jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
             axisBorder: {
                 show: false,
             },
         },
         yaxis: {
             labels: {
-                show: false,
+                formatter: function(val) {
+                    return val + 'kWh';
+                },
             },
         },
         fill: {
-            type: 'gradient',
-            gradient: {
-                inverseColors: !0,
-                shade: 'light',
-                type: 'horizontal',
-                shadeIntensity: 0.25,
-                gradientToColors: void 0,
-                opacityFrom: 1,
-                opacityTo: 1,
-                stops: [0, 100, 100, 100],
-            },
+            opacity: 1,
         },
         tooltip: {
             y: {
                 formatter: function(val) {
-                    return val;
+                    return '' + val + 'kWh';
                 },
             },
         },
     };
 
-    const apexData = [
+    const apexBarChartData = [
         {
-            name: 'Tasks',
+            name: 'Actual',
             data: [230, 220, 200, 190, 200, 205, 210, 280, 250, 200, 210, 240],
         },
+        // {
+        //     name: 'Projection',
+        //     data: [89, 80],
+        // },
     ];
 
     return (
@@ -101,17 +86,25 @@ const TasksChart = () => {
                     </DropdownToggle>
 
                     <DropdownMenu right>
+                        <DropdownItem>Sales Report</DropdownItem>
                         <DropdownItem>Export Report</DropdownItem>
-                        <DropdownItem>Print</DropdownItem>
+                        <DropdownItem>Profit</DropdownItem>
+                        <DropdownItem>Action</DropdownItem>
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-4">1년간 전력사용량</h4>
+                <h4 className="header-title mb-3">1년간 전력사용량</h4>
 
-                <Chart options={apexOpts} series={apexData} type="bar" height={350} className="apex-charts mt-2" />
+                <Chart
+                    options={apexBarChartOpts}
+                    series={apexBarChartData}
+                    type="bar"
+                    className="apex-charts"
+                    height={260}
+                />
             </CardBody>
         </Card>
     );
 };
 
-export default TasksChart;
+export default PerformanceChart;

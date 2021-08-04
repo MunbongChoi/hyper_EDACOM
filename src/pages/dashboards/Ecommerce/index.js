@@ -1,8 +1,6 @@
 // @flow
 import React from 'react';
 import { Row, Col } from 'reactstrap';
-
-import Statistics2 from './Statistics2';
 import HyperDatepicker from '../../../components/Datepicker';
 import Statistics from './Statistics';
 import PerformanceChart from './PerformanceChart';
@@ -55,7 +53,6 @@ const EcommerceDashboardPage = () => {
                 </Col>
                 <Col xl={5}>
                     <Statistics />
-                    {/*<Statistics2 />*/}
                 </Col>
             </Row>
             {/*<Row>*/}

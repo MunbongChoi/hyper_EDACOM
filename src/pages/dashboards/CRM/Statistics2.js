@@ -42,15 +42,15 @@ const Statistics = () => {
                     <StatisticsWidget
                         icon="mdi mdi-currency-usd"
                         description="Revenue"
-                        title="적립된 포인트"
-                        stats="P6,254"
+                        title="미래 전력사용예측량"
+                        stats="40kWh"
                         trend={{
                             textClass: 'text-danger',
                             icon: 'mdi mdi-arrow-down-bold',
                             value: '7.00%',
                             time: 'Since last month',
                         }}></StatisticsWidget>
-                </Col>
+                {/*</Col>*/}
 
             {/*    <Col lg={6}>*/}
             {/*        <StatisticsWidget*/}
@@ -64,7 +64,7 @@ const Statistics = () => {
             {/*                value: '4.87%%',*/}
             {/*                time: 'Since last month',*/}
             {/*            }}></StatisticsWidget>*/}
-            {/*    </Col>*/}
+                </Col>
             </Row>
         </React.Fragment>
     );

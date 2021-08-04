@@ -20,11 +20,12 @@ const RevenueChart = () => {
             type: 'solid',
             opacity: [0, 1],
         },
-        labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'],
+        labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16',
+        '17', '18', '19', '20', '21', '22', '23', '24'],
         markers: {
             size: 2,
         },
-        colors: ['#0a554c', '#ffd563'],
+        colors: ['#f87b46', '#ffd563'],
         yaxis: [
             {
                 title: {
@@ -39,14 +40,14 @@ const RevenueChart = () => {
             y: {
                 formatter: function(y) {
                     if (typeof y !== 'undefined') {
-                        return y.toFixed(0) + 'kWh';
+                        return y.toFixed(0) + 'k';
                     }
                     return y;
                 },
             },
         },
         grid: {
-            borderColor: '#f1f3fa',
+            borderColor: '#ffffff',
         },
         legend: {
             fontSize: '14px',
@@ -70,15 +71,15 @@ const RevenueChart = () => {
 
     const apexLineChartWithLablesData = [
         {
-            name: '금일 전력사용량',
+            name: '내일 전력사용량',
             type: 'area',
-            data: [44, 55, 31, 47, 31, 43, 26, 41, 31, 47, 33, 43, 50, 30],
+            data: [30, 24, 26, 23, 23, 22, 20, 30, 35, 37, 40, 50, 55, 55, 60, 70, 60, 50, 47, 45, 40, 37, 35, 33],
         },
-        {
-            name: '과거 전력사용량',
-            type: 'line',
-            data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43, 56, 50, 30],
-        },
+        // {
+        //     name: '과거 전력사용량',
+        //     type: 'line',
+        //     data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43, 56, 50, 30],
+        // },
     ];
 
     return (
@@ -97,7 +98,7 @@ const RevenueChart = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">전력사용량 비교 분석 서비스</h4>
+                <h4 className="header-title mb-3">내일의 전력사용량 예측 서비스</h4>
 
                 {/*<div className="chart-content-bg">*/}
                 {/*    <div className="row text-center">*/}

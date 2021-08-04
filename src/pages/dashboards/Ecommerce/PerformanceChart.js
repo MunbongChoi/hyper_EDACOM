@@ -40,7 +40,7 @@ const PerformanceChart = () => {
         legend: {
             show: false,
         },
-        colors: ['#727cf5', '#e3eaef'],
+        colors: ['#095087', 'rgba(205,217,227,0.83)'],
         xaxis: {
             categories: ['TOU', '누진세'],
             axisBorder: {

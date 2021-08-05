@@ -14,7 +14,7 @@ const RevenueChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            width: 3,
+            width: 6,
         },
         fill: {
             type: 'solid',
@@ -22,7 +22,7 @@ const RevenueChart = () => {
         },
         labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'],
         markers: {
-            size: 2,
+            size: 0.5,
         },
         colors: ['#0a554c', '#ffd563'],
         yaxis: [
@@ -77,7 +77,7 @@ const RevenueChart = () => {
         {
             name: '과거 전력사용량',
             type: 'line',
-            data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43, 56, 50, 30],
+            data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43, 56, 50, 20],
         },
     ];
 

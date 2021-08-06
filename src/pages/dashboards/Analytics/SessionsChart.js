@@ -12,13 +12,13 @@ import {
 } from 'reactstrap';
 
 const SessionsChart = () => {
-    const colors = ['#0acf97'];
+    const colors = ['#ffa200'];
 
     const getDaysInMonth = (month, year) => {
         var date = new Date(year, month, 1);
         var days = [];
         var idx = 0;
-        while (date.getMonth() === month && idx < 15) {
+        while (date.getMonth() === month && idx < 24) {
             var d = new Date(date);
             days.push(d.getDate() + ' ' + d.toLocaleString('en-us', { month: 'short' }));
             date.setDate(date.getDate() + 1);
@@ -50,7 +50,7 @@ const SessionsChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            width: 4,
+            width: 7,
         },
         zoom: {
             enabled: false,
@@ -73,7 +73,7 @@ const SessionsChart = () => {
         yaxis: {
             labels: {
                 formatter: function(val) {
-                    return val + 'k';
+                    return val + 'kWh';
                 },
                 offsetX: -15,
             },
@@ -93,7 +93,7 @@ const SessionsChart = () => {
 
     const apexBarChartData = [
         {
-            name: 'Sessions',
+            name: '예측된 한달 전력사용량',
             data: [10, 20, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40, 30, 50, 35],
         },
     ];
@@ -127,12 +127,7 @@ const SessionsChart = () => {
                     </li>
                     <li className="nav-item">
                         <a className="nav-link active" href="/">
-                            15d
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link text-muted" href="/">
-                            1m
+                            1month
                         </a>
                     </li>
                     <li className="nav-item">
@@ -140,9 +135,14 @@ const SessionsChart = () => {
                             1y
                         </a>
                     </li>
+                    {/*<li className="nav-item">*/}
+                    {/*    <a className="nav-link text-muted" href="/">*/}
+                    {/*        1y*/}
+                    {/*    </a>*/}
+                    {/*</li>*/}
                 </ul>
 
-                <h4 className="header-title mb-3">Sessions Overview</h4>
+                <h4 className="header-title mb-3">예측된 한달 전력사용량</h4>
 
                 <UncontrolledAlert color="warning">
                     Property HY1xx is not receiving hits. Either your site is not receiving any sessions or it is not

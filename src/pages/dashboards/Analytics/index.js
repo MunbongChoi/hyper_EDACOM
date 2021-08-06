@@ -28,17 +28,17 @@ const AnalyticsDashboardPage = () => {
                                 </button>
                             </form>
                         </div>
-                        <h4 className="page-title">Analytics</h4>
+                        <h4 className="page-title">요금제 비교 서비스</h4>
                     </div>
                 </Col>
             </Row>
 
             <Row>
-                <Col xl={3} lg={4}>
-                    <Statistics />
-                </Col>
+                {/*<Col xl={3} lg={4}>*/}
+                {/*    <Statistics />*/}
+                {/*</Col>*/}
 
-                <Col xl={9} lg={8}>
+                <Col xl={12} lg={8}>
                     <SessionsChart />
                 </Col>
             </Row>

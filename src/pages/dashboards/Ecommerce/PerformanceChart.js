@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, UncontrolledAlert} from 'reactstrap';
 
 const PerformanceChart = () => {
     const apexBarChartOpts = {
@@ -94,6 +94,9 @@ const PerformanceChart = () => {
                 </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">금일 요금제 비교 서비스</h4>
+                <UncontrolledAlert color="warning">
+                    고객님의 전력사용패턴을 분석하여 나온 요금제 그래프입니다.
+                </UncontrolledAlert>
 
                 <Chart
                     options={apexBarChartOpts}

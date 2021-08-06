@@ -11,6 +11,8 @@ import OsChart from './OsChart';
 import Channels from './Channels';
 import Social from './Social';
 import Engagement from './Engagement';
+import PerformanceChart from "../Ecommerce/PerformanceChart";
+
 
 const AnalyticsDashboardPage = () => {
     return (
@@ -44,28 +46,30 @@ const AnalyticsDashboardPage = () => {
             </Row>
 
             <Row>
-                <Col xl={4} lg={6}>
-                    <ViewsChart />
+                <Col xl={7} lg={6}>
+                    {/*<ViewsChart />*/}
+                    <PerformanceChart />
                 </Col>
-                <Col xl={4} lg={6}>
-                    <BrowsersChart />
-                </Col>
-                <Col xl={4} lg={12}>
-                    <OsChart />
+                {/*<Col xl={4} lg={6}>*/}
+                {/*    <BrowsersChart />*/}
+                {/*</Col>*/}
+                <Col xl={5} lg={12}>
+                    {/*<OsChart />*/}
+                    <Channels />
                 </Col>
             </Row>
 
-            <Row>
-                <Col xl={4} lg={6}>
-                    <Channels />
-                </Col>
-                <Col xl={4} lg={6}>
-                    <Social />
-                </Col>
-                <Col xl={4} lg={6}>
-                    <Engagement />
-                </Col>
-            </Row>
+            {/*<Row>*/}
+            {/*    <Col xl={4} lg={6}>*/}
+            {/*        <Channels />*/}
+            {/*    </Col>*/}
+            {/*    <Col xl={4} lg={6}>*/}
+            {/*        <Social />*/}
+            {/*    </Col>*/}
+            {/*    <Col xl={4} lg={6}>*/}
+            {/*        <Engagement />*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
         </React.Fragment>
     );
 };

@@ -94,7 +94,7 @@ const SessionsChart = () => {
     const apexBarChartData = [
         {
             name: '예측된 한달 전력사용량',
-            data: [10, 20, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40, 30, 50, 35],
+            data: [10, 20, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40, 30, 50, 35, 10, 20, 5, 15, 10, 20, 15, 25, 20],
         },
     ];
 
@@ -145,8 +145,7 @@ const SessionsChart = () => {
                 <h4 className="header-title mb-3">예측된 한달 전력사용량</h4>
 
                 <UncontrolledAlert color="warning">
-                    Property HY1xx is not receiving hits. Either your site is not receiving any sessions or it is not
-                    tagged correctly.
+                    X달동안의 고객님의 한달 간 전력사용량을 분석하여 나온 결과입니다.
                 </UncontrolledAlert>
 
                 <Chart

@@ -13,11 +13,11 @@ const Statistics = () => {
                                 <Col sm={6} xl={3}>
                                     <Card className="shadow-none m-0">
                                         <CardBody className="text-center">
-                                            <i className="dripicons-briefcase text-muted font-24"></i>
+                                            <i className="mdi mdi-alpha-p-box"></i>
                                             <h3>
-                                                <span>29</span>
+                                                <span>29P</span>
                                             </h3>
-                                            <p className="text-muted font-15 mb-0">Total Projects</p>
+                                            <p className="text-muted font-15 mb-0">Total Point</p>
                                         </CardBody>
                                     </Card>
                                 </Col>
@@ -25,11 +25,11 @@ const Statistics = () => {
                                 <Col sm={6} xl={3}>
                                     <Card className="card shadow-none m-0 border-left">
                                         <CardBody className="text-center">
-                                            <i className="dripicons-checklist text-muted font-24"></i>
+                                            <i className="uil-bolt-alt"></i>
                                             <h3>
-                                                <span>715</span>
+                                                <span>20kWh</span>
                                             </h3>
-                                            <p className="text-muted font-15 mb-0">Total Tasks</p>
+                                            <p className="text-muted font-15 mb-0">한달동안 줄인 전력량</p>
                                         </CardBody>
                                     </Card>
                                 </Col>
@@ -37,11 +37,11 @@ const Statistics = () => {
                                 <Col sm={6} xl={3}>
                                     <Card className="card shadow-none m-0 border-left">
                                         <CardBody className="text-center">
-                                            <i className="dripicons-user-group text-muted font-24"></i>
+                                            <i className="mdi mdi-engine-off-outline"></i>
                                             <h3>
                                                 <span>31</span>
                                             </h3>
-                                            <p className="text-muted font-15 mb-0">Members</p>
+                                            <p className="text-muted font-15 mb-0">줄어든 탄소배출량 </p>
                                         </CardBody>
                                     </Card>
                                 </Col>
@@ -49,11 +49,11 @@ const Statistics = () => {
                                 <Col sm={6} xl={3}>
                                     <Card className="card shadow-none m-0 border-left">
                                         <CardBody className="text-center">
-                                            <i className="dripicons-graph-line text-muted font-24"></i>
+                                            <i className="uil-trees"></i>
                                             <h3>
-                                                <span>93%</span> <i className="mdi mdi-arrow-up text-success"></i>
+                                                <span>10그루</span> <i className="mdi mdi-arrow-up text-success"></i>
                                             </h3>
-                                            <p className="text-muted font-15 mb-0">Productivity</p>
+                                            <p className="text-muted font-15 mb-0">탄소배출량을 나무심은 개수로 환산</p>
                                         </CardBody>
                                     </Card>
                                 </Col>

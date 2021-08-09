@@ -14,8 +14,8 @@ const BasicMap = props => {
                 <div className="gmaps">
                     <Map
                         google={props.google}
-                        zoom={14}
-                        initialCenter={{ lat: 21.569874, lng: 71.5893798 }}
+                        zoom={7}
+                        initialCenter={{ lat: 37.63331412505147, lng: 126.97672113547358 }}
                         style={{ width: '100%', height: '100%', position: 'relative' }}></Map>
                 </div>
             </CardBody>

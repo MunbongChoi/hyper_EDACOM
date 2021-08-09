@@ -100,7 +100,6 @@ const BasicTables = React.lazy(() => import('../pages/tables/Basic'));
 const AdvancedTables = React.lazy(() => import('../pages/tables/Advanced'));
 // maps
 const GoogleMaps = React.lazy(() => import('../pages/GoogleMaps'));
-
 // handle auth and authorization
 
 const PrivateRoute = ({ component: Component, roles, ...rest }) => (

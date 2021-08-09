@@ -14,7 +14,7 @@ const RevenueChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            width: 6,
+            width: 10,
         },
         fill: {
             type: 'solid',
@@ -23,7 +23,7 @@ const RevenueChart = () => {
         labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16',
         '17', '18', '19', '20', '21', '22', '23', '24'],
         markers: {
-            size: 0.5,
+            size: 0,
         },
         colors: ['#f87b46', '#ffd563'],
         yaxis: [

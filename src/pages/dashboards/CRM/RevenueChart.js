@@ -14,7 +14,7 @@ const RevenueChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            width: 6,
+            width: 10,
         },
         fill: {
             type: 'solid',

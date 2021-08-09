@@ -31,7 +31,7 @@ const PerformanceChart = () => {
         },
         stroke: {
             show: true,
-            width: 2,
+            width: 0.5,
             colors: ['transparent'],
         },
         zoom: {

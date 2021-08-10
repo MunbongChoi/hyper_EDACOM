@@ -1,7 +1,15 @@
 // @flow
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {
+    Card,
+    CardBody,
+    UncontrolledButtonDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    UncontrolledAlert
+} from 'reactstrap';
 
 const RevenueChart = () => {
     const apexLineChartWithLables = {
@@ -98,6 +106,10 @@ const RevenueChart = () => {
                 </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">전력사용량 비교 분석 서비스</h4>
+
+                <UncontrolledAlert color="warning">
+                    실시간으로 어제의 전력사용량과 오늘 전력사용량을 비교해줍니다.
+                </UncontrolledAlert>
 
                 {/*<div className="chart-content-bg">*/}
                 {/*    <div className="row text-center">*/}

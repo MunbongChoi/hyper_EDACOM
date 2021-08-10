@@ -1,7 +1,15 @@
 // @flow
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {
+    Card,
+    CardBody,
+    UncontrolledButtonDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    UncontrolledAlert
+} from 'reactstrap';
 
 const RevenueChart = () => {
     const apexLineChartWithLables = {
@@ -18,14 +26,14 @@ const RevenueChart = () => {
         },
         fill: {
             type: 'solid',
-            opacity: [0, 1],
+            opacity: [1, 0],
         },
         labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16',
         '17', '18', '19', '20', '21', '22', '23', '24'],
         markers: {
             size: 0,
         },
-        colors: ['#f87b46', '#ffd563'],
+        colors: ['#99d598', '#ffd563'],
         yaxis: [
             {
                 title: {
@@ -99,6 +107,10 @@ const RevenueChart = () => {
                 </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">내일의 전력사용량 예측 서비스</h4>
+
+                <UncontrolledAlert color="warning">
+                    과거 전력사용량 데이터들을 분석하여 내일의 전력사용량을 예측한 결과입니다.
+                </UncontrolledAlert>
 
                 {/*<div className="chart-content-bg">*/}
                 {/*    <div className="row text-center">*/}

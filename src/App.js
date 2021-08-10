@@ -13,7 +13,7 @@ import './assets/scss/Saas.scss';
 
 // For Modern import Modern.scss
 // import './assets/scss/Modern.scss';
-// For modern dakr import Modern-Dark.scss
+// For modern dark import Modern-Dark.scss
 // import './assets/scss/Modern-Dark.np';
 
 // For Creative demo import Modern.scss

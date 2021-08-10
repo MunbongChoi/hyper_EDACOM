@@ -1,7 +1,15 @@
 // @flow
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {
+    Card,
+    CardBody,
+    UncontrolledButtonDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    UncontrolledAlert
+} from 'reactstrap';
 
 const PerformanceChart = () => {
     const apexBarChartOpts = {
@@ -23,7 +31,7 @@ const PerformanceChart = () => {
         plotOptions: {
             bar: {
                 horizontal: false,
-                columnWidth: '20%',
+                columnWidth: '40%',
             },
         },
         dataLabels: {
@@ -68,12 +76,12 @@ const PerformanceChart = () => {
 
     const apexBarChartData = [
         {
-            name: 'Actual',
+            name: '전력사용량',
             data: [230, 220, 200, 190, 200, 205, 210, 280, 250, 200, 210, 240],
         },
         // {
         //     name: 'Projection',
-        //     data: [89, 80],
+        //     data: [230, 220, 200, 190, 200, 205, 210, 280, 250, 200, 210, 240],
         // },
     ];
 
@@ -94,6 +102,10 @@ const PerformanceChart = () => {
                 </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">1년간 전력사용량</h4>
+
+                <UncontrolledAlert color="warning">
+                    실측된 현재까지의 월별 전력사용량과 예측된 월별 전력사용량입니다.
+                </UncontrolledAlert>
 
                 <Chart
                     options={apexBarChartOpts}

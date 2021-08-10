@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import {Row, Col} from 'reactstrap';
+import {Row, Col, Card, CardBody} from 'reactstrap';
 
 import PageTitle from '../../../components/PageTitle';
 import Statistics from './Statistics';
@@ -24,11 +24,11 @@ const ProjectDashboardPage = () => {
             <Statistics />
             <Row>
                 <Col xl={4} md={12}>
-                {/*    /!*<Status />*!/*/}
-                {/*</Col>*/}
+                    <Status />
+                </Col>
                 {/*<Col xl={8} md={6}>*/}
                 {/*    <Tasks />*/}
-                </Col>
+                {/*</Col>*/}
             </Row>
 
             {/*<Row>*/}
@@ -48,6 +48,5 @@ const ProjectDashboardPage = () => {
         </React.Fragment>
     );
 };
-
 
 export default ProjectDashboardPage;

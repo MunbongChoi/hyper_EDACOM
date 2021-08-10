@@ -9,7 +9,7 @@ import {
     UncontrolledButtonDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem,
+    DropdownItem, UncontrolledAlert,
 } from 'reactstrap';
 
 const RevenueChart = () => {
@@ -40,7 +40,7 @@ const RevenueChart = () => {
         },
         stroke: {
             curve: 'smooth',
-            width: 4,
+            width: 10,
         },
         zoom: {
             enabled: false,
@@ -96,6 +96,9 @@ const RevenueChart = () => {
                 </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">금일 전력 사용량</h4>
+                <UncontrolledAlert color="warning">
+                    실시간으로 고객님의 전력사용량을 보여줍니다.
+                </UncontrolledAlert>
 
                 {/*<div className="chart-content-bg">*/}
                 {/*    <Row className="text-center">*/}

@@ -9,6 +9,10 @@ import Tasks from './Tasks';
 import TasksChart from './TasksChart';
 import Activity from './Activity';
 import Calendar from './Calendar';
+
+///////////////////////////////////////////
+import GoogleMaps2 from "./GoogleMaps2";
+////////////////////////////////////////
 const ProjectDashboardPage = () => {
     return (
 
@@ -41,8 +45,9 @@ const ProjectDashboardPage = () => {
                 {/*<Col xl={5}>*/}
                 {/*    <Activity />*/}
                 {/*</Col>*/}
-                <Col xl={7}>
-                    <Calendar />
+                <Col xl={12}>
+                    {/*<Calendar />*/}
+                    <GoogleMaps2 />
                 </Col>
             </Row>
         </React.Fragment>

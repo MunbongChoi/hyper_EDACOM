@@ -25,6 +25,7 @@ class ChatApp extends Component {
      */
     onUserChange = user => {
         this.setState({ selectedUser: user });
+        // axios.get()
     };
 
     render() {

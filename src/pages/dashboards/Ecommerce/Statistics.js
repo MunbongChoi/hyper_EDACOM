@@ -3,6 +3,7 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 
 import StatisticsWidget from '../../../components/StatisticsWidget';
+import {Map} from "google-maps-react";
 
 const Statistics = () => {
     return (
@@ -13,7 +14,7 @@ const Statistics = () => {
                         icon="mdi mdi-account-multiple"
                         description="Number of Customers"
                         title="탄소배출량"
-                        stats="36,254"
+                        stats="36.254"
                         trend={{
                             textClass: 'text-success',
                             icon: 'mdi mdi-arrow-up-bold',
@@ -43,7 +44,7 @@ const Statistics = () => {
                         icon="mdi mdi-currency-usd"
                         description="Revenue"
                         title="적립된 포인트"
-                        stats="P6,254"
+                        stats="30P"
                         trend={{
                             textClass: 'text-danger',
                             icon: 'mdi mdi-arrow-down-bold',

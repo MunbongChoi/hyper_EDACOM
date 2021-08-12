@@ -14,8 +14,8 @@ const BasicMap = props => {
                     <Map
                         google={props.google}
                         zoom={7}
-                        initialCenter={{ lat: 35.1213783333333, lng: 129.018121666667 }}
-                        style={{ width: '100%', height: '100%', position: 'relative' }}></Map>
+                        initialCenter={{ lat: 36.535728, lng: 127.940965 }}
+                        style={{ width: '100%', height: '150%', position: 'relative' }}></Map>
                 </div>
             </CardBody>
         </Card>
@@ -210,39 +210,39 @@ const DarkStyledMap = props => {
 const GoogleMaps = props => {
     return (
         <React.Fragment>
-            <PageTitle
-                breadCrumbItems={[
-                    { label: 'Maps', path: '/features/googlemaps' },
-                    { label: 'Google Maps', path: '/features/googlemaps', active: true },
-                ]}
-                title={'Google Maps'}
-            />
+            {/*<PageTitle*/}
+            {/*    breadCrumbItems={[*/}
+            {/*        { label: 'Maps', path: '/features/googlemaps' },*/}
+            {/*        { label: 'Google Maps', path: '/features/googlemaps', active: true },*/}
+            {/*    ]}*/}
+            {/*    title={'Google Maps'}*/}
+            {/*/>*/}
 
             <Row>
-                <Col lg={6}>
+                <Col lg={12}>
                     <BasicMap google={props.google} />
                 </Col>
 
-                <Col lg={6}>
-                    <MapWithMarker google={props.google} />
-                </Col>
+                {/*<Col lg={6}>*/}
+                {/*    <MapWithMarker google={props.google} />*/}
+                {/*</Col>*/}
             </Row>
 
-            <Row>
-                <Col lg={6}>
-                    <StreetViewMap google={props.google} />
-                </Col>
+            {/*<Row>*/}
+            {/*    <Col lg={6}>*/}
+            {/*        <StreetViewMap google={props.google} />*/}
+            {/*    </Col>*/}
 
-                <Col lg={6}>
-                    <LightStyledMap google={props.google} />
-                </Col>
-            </Row>
+            {/*    <Col lg={6}>*/}
+            {/*        <LightStyledMap google={props.google} />*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
 
-            <Row>
-                <Col lg={6}>
-                    <DarkStyledMap google={props.google} />
-                </Col>
-            </Row>
+            {/*<Row>*/}
+            {/*    <Col lg={6}>*/}
+            {/*        <DarkStyledMap google={props.google} />*/}
+            {/*    </Col>*/}
+            {/*</Row>*/}
         </React.Fragment>
     );
 };

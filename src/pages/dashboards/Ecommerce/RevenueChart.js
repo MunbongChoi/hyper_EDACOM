@@ -28,6 +28,7 @@ const RevenueChart = () => {
                 show: false,
             },
             parentHeightOffset: 0,
+            stacked: true,
         },
         grid: {
             padding: {
@@ -51,7 +52,7 @@ const RevenueChart = () => {
         colors: ['#8ca4d2', '#0acf97', '#fa5c7c', '#ffbc00'],
         xaxis: {
             type: 'string',
-            categories: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'],
+            categories: ['01h', '02h', '03h', '04h', '05h', '06h', '07h', '08h', '09h', '10h', '11h', '12h', '13h', '14h', '15h', '16h', '17h', '18h', '19h'],
             tooltip: {
                 enabled: false,
             },
@@ -62,7 +63,7 @@ const RevenueChart = () => {
         yaxis: {
             labels: {
                 formatter: function(val) {
-                    return val + 'kWh';
+                    return val + 'kW';
                 },
             },
         },
@@ -71,7 +72,7 @@ const RevenueChart = () => {
     const apexLineChartWithLablesData = [
         {
             name: 'Current Week',
-            data: [10, 20, 15, 25, 20, 30, 20, 10, 20, 15, 25, 20, 30, 30],
+            data: [0.57, 0.45, 0.27, 0.21, 0.12, 0.1, 0.1, 0.11, 0.13, 0.15, 0.56, 0.36, 0.47, 0.51, 0.52, 0.51, 0.88, 0.94, 0.53 ],
         },
         // {
         //     name: 'Previous Week',
@@ -96,7 +97,7 @@ const RevenueChart = () => {
                 </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">금일 전력 사용량</h4>
-                <UncontrolledAlert color="warning">
+                <UncontrolledAlert color="info">
                     실시간으로 고객님의 전력사용량을 보여줍니다.
                 </UncontrolledAlert>
 

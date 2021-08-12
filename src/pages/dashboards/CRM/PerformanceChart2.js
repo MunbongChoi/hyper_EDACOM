@@ -50,7 +50,7 @@ const PerformanceChart = () => {
         },
         colors: ['#bacd59', '#e3eaef'],
         xaxis: {
-            categories: ['jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
             axisBorder: {
                 show: false,
             },
@@ -103,7 +103,7 @@ const PerformanceChart = () => {
 
                 <h4 className="header-title mb-3">1년간 전력사용량</h4>
 
-                <UncontrolledAlert color="warning">
+                <UncontrolledAlert color="info">
                     실측된 현재까지의 월별 전력사용량과 예측된 월별 전력사용량입니다.
                 </UncontrolledAlert>
 

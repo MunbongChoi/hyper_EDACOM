@@ -39,8 +39,9 @@ const SessionsChart = () => {
         },
         chart: {
             height: 309,
-            type: 'area',
+            type: 'bar',
             parentHeightOffset: 0,
+            stacked: true,
             toolbar: {
                 show: false,
             },
@@ -94,7 +95,7 @@ const SessionsChart = () => {
     const apexBarChartData = [
         {
             name: '예측된 한달 전력사용량',
-            data: [10, 20, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40, 30, 50, 35, 10, 20, 5, 15, 10, 20, 15, 25, 20],
+            data: [10.7, 9.14, 9.11, 9.39, 10.56, 8.02, 8.92, 9.13, 10.78, 9.5, 8.84, 10.32, 9.37, 10.2, 10.9, 9.21, 9.95, 8.13, 8.28, 10.02, 9.54, 9.49, 10.21, 9.22],
         },
     ];
 
@@ -144,7 +145,7 @@ const SessionsChart = () => {
 
                 <h4 className="header-title mb-3">예측된 한달 전력사용량</h4>
 
-                <UncontrolledAlert color="warning">
+                <UncontrolledAlert color="info">
                     X달동안의 고객님의 한달 간 전력사용량을 분석하여 나온 결과입니다.
                 </UncontrolledAlert>
 

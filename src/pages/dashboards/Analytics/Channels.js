@@ -10,7 +10,7 @@ const Channels = () => {
                     Export <i className="mdi mdi-download ml-1"></i>
                 </Button>
                 <h4 className="header-title mb-2">요금제 제안</h4>
-                <UncontrolledAlert color="warning">
+                <UncontrolledAlert color="info">
                     고객님의 전력사용패턴을 분석하여 효율적인 요금제를 추천해드립니다.
                 </UncontrolledAlert>
 
@@ -25,24 +25,24 @@ const Channels = () => {
                     <tbody>
                         <tr>
                             <td>누진세</td>
-                            <td>2,050</td>
+                            <td>46,000</td>
                             <td>
                                 <Progress value={65} style={{ height: '3px' }} />
                             </td>
                         </tr>
                         <tr>
                             <td>TOU</td>
-                            <td>1,850</td>
+                            <td>44,000</td>
                             <td>
                                 <Progress value={45} style={{ height: '3px' }} color="info" />
                             </td>
                         </tr>
                         <tr>
-                            <td>TOU요금제 추천</td>
-                            <td>200</td>
+                            <td>추천요금제</td>
+                            <td>TOU</td>
                             <td>
                                 {/*<Progress value={30} style={{ height: '3px' }} color="warning" />*/}
-                                기존 요금에서 X % 절감가능
+                                누진세보다 2000원 저렴함
                             </td>
                         </tr>
                         {/*<tr>*/}

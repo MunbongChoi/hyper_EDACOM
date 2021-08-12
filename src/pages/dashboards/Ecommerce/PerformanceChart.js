@@ -40,7 +40,7 @@ const PerformanceChart = () => {
         legend: {
             show: false,
         },
-        colors: ['#095087', 'rgba(205,217,227,0.83)'],
+        colors: ['#4578a1', 'rgba(205,217,227,0.83)'],
         xaxis: {
             categories: ['TOU', '누진세'],
             axisBorder: {
@@ -50,7 +50,7 @@ const PerformanceChart = () => {
         yaxis: {
             labels: {
                 formatter: function(val) {
-                    return val + 'k';
+                    return val + '원';
                 },
             },
         },
@@ -60,7 +60,7 @@ const PerformanceChart = () => {
         tooltip: {
             y: {
                 formatter: function(val) {
-                    return '₩' + val + 'k';
+                    return '' + val + '원';
                 },
             },
         },
@@ -69,7 +69,7 @@ const PerformanceChart = () => {
     const apexBarChartData = [
         {
             name: 'Actual',
-            data: [65, 59],
+            data: [44000, 46000],
         },
         {
             name: 'Projection',
@@ -94,7 +94,7 @@ const PerformanceChart = () => {
                 </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">금일 요금제 비교 서비스</h4>
-                <UncontrolledAlert color="warning">
+                <UncontrolledAlert color="info">
                     고객님의 전력사용패턴을 분석하여 나온 요금제 그래프입니다.
                 </UncontrolledAlert>
 

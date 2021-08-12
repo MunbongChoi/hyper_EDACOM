@@ -80,12 +80,12 @@ const RevenueChart = () => {
         {
             name: '금일 전력사용량',
             type: 'area',
-            data: [44, 55, 31, 47, 31, 43, 26, 41, 31, 47, 33, 43, 50, 30],
+            data: [0.33, 0.44, 0.25, 0.17, 0.29, 0.25, 0.28, 0.19, 0.12, 0.3, 0.36, 0.34, 0.37, 0.39],
         },
         {
             name: '과거 전력사용량',
             type: 'line',
-            data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43, 56, 50, 20],
+            data: [0.35, 0.48, 0.28, 0.2, 0.23, 0.25, 0.27, 0.15, 0.13, 0.28, 0.35, 0.31, 0.35, 0.42],
         },
     ];
 
@@ -107,7 +107,7 @@ const RevenueChart = () => {
 
                 <h4 className="header-title mb-3">전력사용량 비교 분석 서비스</h4>
 
-                <UncontrolledAlert color="warning">
+                <UncontrolledAlert color="info">
                     실시간으로 어제의 전력사용량과 오늘 전력사용량을 비교해줍니다.
                 </UncontrolledAlert>
 

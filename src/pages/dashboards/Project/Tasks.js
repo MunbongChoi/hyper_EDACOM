@@ -10,6 +10,8 @@ import {
     Table,
 } from 'reactstrap';
 
+
+
 const Tasks = () => {
     return (
         <Card>
@@ -25,10 +27,10 @@ const Tasks = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">Tasks</h4>
+                <h4 className="header-title mb-3">포인트 전력등급제</h4>
 
                 <p>
-                    <b>107</b> Tasks completed out of 195
+                    <b>그린포인트 등급제도</b>
                 </p>
 
                 <Table responsive className="table-centered table-nowrap table-hover mb-0">
@@ -37,7 +39,7 @@ const Tasks = () => {
                             <td>
                                 <h5 className="font-14 my-1">
                                     <a href="/" className="text-body">
-                                        Coffee detail page - Main Page
+                                        1등급
                                     </a>
                                 </h5>
                                 <span className="text-muted font-13">Due in 3 days</span>
@@ -55,21 +57,21 @@ const Tasks = () => {
                                 <h5 className="font-14 mt-1 font-weight-normal">3h 20min</h5>
                             </td>
                             <td className="table-action" style={{ width: '90px' }}>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-pencil"></i>
-                                </a>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-delete"></i>
-                                </a>
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-pencil"></i>*/}
+                                {/*</a>*/}
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-delete"></i>*/}
+                                {/*</a>*/}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <h5 className="font-14 my-1">
                                     <a href="/" className="text-body">
-                                        Drinking bottle graphics
+                                        2등급
                                     </a>
                                 </h5>
                                 <span className="text-muted font-13">Due in 27 days</span>
@@ -87,21 +89,21 @@ const Tasks = () => {
                                 <h5 className="font-14 mt-1 font-weight-normal">12h 21min</h5>
                             </td>
                             <td className="table-action" style={{ width: '90px' }}>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-pencil"></i>
-                                </a>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-delete"></i>
-                                </a>
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-pencil"></i>*/}
+                                {/*</a>*/}
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-delete"></i>*/}
+                                {/*</a>*/}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <h5 className="font-14 my-1">
                                     <a href="/" className="text-body">
-                                        App design and development
+                                        3등급
                                     </a>
                                 </h5>
                                 <span className="text-muted font-13">Due in 7 days</span>
@@ -119,21 +121,21 @@ const Tasks = () => {
                                 <h5 className="font-14 mt-1 font-weight-normal">78h 05min</h5>
                             </td>
                             <td className="table-action" style={{ width: '90px' }}>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-pencil"></i>
-                                </a>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-delete"></i>
-                                </a>
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-pencil"></i>*/}
+                                {/*</a>*/}
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-delete"></i>*/}
+                                {/*</a>*/}
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <h5 className="font-14 my-1">
                                     <a href="/" className="text-body">
-                                        Poster illustation design
+                                        4등급
                                     </a>
                                 </h5>
                                 <span className="text-muted font-13">Due in 5 days</span>
@@ -151,14 +153,14 @@ const Tasks = () => {
                                 <h5 className="font-14 mt-1 font-weight-normal">26h 58min</h5>
                             </td>
                             <td className="table-action" style={{ width: '90px' }}>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-pencil"></i>
-                                </a>
-                                <a href="/" className="action-icon">
-                                    {' '}
-                                    <i className="mdi mdi-delete"></i>
-                                </a>
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-pencil"></i>*/}
+                                {/*</a>*/}
+                                {/*<a href="/" className="action-icon">*/}
+                                {/*    {' '}*/}
+                                {/*    <i className="mdi mdi-delete"></i>*/}
+                                {/*</a>*/}
                             </td>
                         </tr>
                     </tbody>

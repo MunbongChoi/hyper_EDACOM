@@ -5,29 +5,28 @@ import { Row, Col, Card, CardBody, Table } from 'reactstrap';
 // import PageTitle from '../../components/PageTitle';
 
 const records = [
-    { id: 1, firstName: 'Mark', lastName: 'Otto', username: '@mdo' },
-    { id: 2, firstName: 'Jacob', lastName: 'Thornton', username: '@fat' },
-    { id: 3, firstName: 'Dave', lastName: 'G', username: '@dave' },
-    { id: 4, firstName: 'Nik', lastName: 'N', username: '@nikn' },
-    { id: 5, firstName: 'Shreyu', lastName: 'Navadiya', username: '@sn' },
+    { id: 1, firstName: <i className="mdi mdi-food-apple"></i>, lastName: '10P', username: '200kW' },
+    { id: 2, firstName: <i className="mdi mdi-tree-outline"></i>, lastName: '5P', username: '210kW' },
+    { id: 3, firstName: <i className="mdi mdi-sprout-outline"></i>, lastName: '3P', username: '220kW' },
+    { id: 4, firstName: <i className="mdi mdi-seed-outline"></i>, lastName: '0P', username: '230kW' },
 ];
 
 const BasicTable = () => {
     return (
         <Card>
             <CardBody>
-                <h4 className="header-title">Basic example</h4>
-                <p className="text-muted font-14 mb-4">
-                    Just use <code>Table</code> element
-                </p>
+                <h4 className="header-title">전력등급제 테이블</h4>
+                {/*<p className="text-muted font-14 mb-4">*/}
+                {/*    Just use <code>Table</code> element*/}
+                {/*</p>*/}
 
                 <Table className="mb-0">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Username</th>
+                            <th>등급</th>
+                            <th>포인트</th>
+                            <th>전력사용량</th>
                         </tr>
                     </thead>
                     <tbody>

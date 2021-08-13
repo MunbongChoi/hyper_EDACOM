@@ -13,19 +13,19 @@ const StepChart = () => {
     };
 
     const stepData = [
-        { key: 'Appetizer', value: 400 },
-        { key: 'Soup', value: 300 },
-        { key: 'Salad', value: 300 },
-        { key: 'Lunch', value: 250 },
-        { key: 'Dinner', value: 220 },
-        { key: 'Dessert', value: 100 },
-        { key: 'Midnight snack', value: 20 },
+        { key: '7등급', value: 20 },
+        { key: '6등급', value: 80 },
+        { key: '5등급', value: 150 },
+        { key: '4등급', value: 200 },
+        { key: '3등급', value: 150 },
+        { key: '2등급', value: 100 },
+        { key: '1등급', value: 20 },
     ];
 
     return (
         <Card>
             <CardBody>
-                <h4 className="header-title mb-4">Step Chart</h4>
+                <h4 className="header-title mb-4">가구당 전력사용량 분포도</h4>
                 <div className="step-container" style={chartContainerStyle}>
                     <ResponsiveStepChart
                         data={stepData}

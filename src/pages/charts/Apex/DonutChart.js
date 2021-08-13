@@ -10,8 +10,8 @@ const DonutChart = () => {
             height: 320,
             type: 'pie',
         },
-        labels: ['Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5'],
-        colors: ['#727cf5', '#6c757d', '#0acf97', '#fa5c7c', '#e3eaef'],
+        labels: ['4등급', '3등급', '2등급', '1등급'],
+        colors: ['#e35b27', '#ffc81c', '#eec7a6', '#977e77'],
         legend: {
             show: true,
             position: 'bottom',
@@ -37,12 +37,12 @@ const DonutChart = () => {
         ],
     };
 
-    const apexDonutData = [44, 55, 41, 17, 15];
+    const apexDonutData = [55, 25, 15, 5];
 
     return (
         <Card>
             <CardBody>
-                <h4 className="header-title mb-3">Donut Chart</h4>
+                <h4 className="header-title mb-3">고객 등급 퍼센트</h4>
                 <Chart
                     options={apexDonutOpts}
                     series={apexDonutData}

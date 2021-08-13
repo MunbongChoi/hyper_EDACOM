@@ -8,14 +8,14 @@ const BasicMap = props => {
     return (
         <Card>
             <CardBody>
-                <h4 className="header-title mb-3">Basic Google Map</h4>
+                <h4 className="header-title mb-3">나의 위치는???</h4>
 
                 <div className="gmaps">
                     <Map
                         google={props.google}
-                        zoom={7}
-                        initialCenter={{ lat: 36.535728, lng: 127.940965 }}
-                        style={{ width: '100%', height: '150%', position: 'relative' }}></Map>
+                        zoom={10}
+                        initialCenter={{ lat: 37.434347, lng: 126.996439 }}
+                        style={{ width: '100%', height: '100%', position: 'relative' }}></Map>
                 </div>
             </CardBody>
         </Card>

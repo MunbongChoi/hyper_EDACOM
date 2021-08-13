@@ -11,6 +11,8 @@ import Activity from './Activity';
 import Calendar from './Calendar';
 ///////////////////////////////////
 import Basictable from "./Basic2";
+import StepChart from "../../charts/Brite/StepChart";
+import DonutChart from "../../charts/Apex/DonutChart";
 ///////////////////////////////////////////
 import GoogleMaps2 from "./GoogleMaps2";
 ////////////////////////////////////////
@@ -28,12 +30,11 @@ const ProjectDashboardPage = () => {
 
             <Statistics />
             <Row>
-                {/*<Col xl={8}>*/}
-                {/*    <Calendar />*/}
-                {/*    <GoogleMaps2 />*/}
-                {/*</Col>*/}
-                <Col xl={8} md={5}>
-                    {/*<Tasks />*/}
+                <Col xl={5}>
+                {/*/!*    <Calendar />*!/*/}
+                    <GoogleMaps2 />
+                </Col>
+                <Col xl={7}>
                     <Basictable />
                 </Col>
             </Row>
@@ -44,13 +45,15 @@ const ProjectDashboardPage = () => {
             {/*    </Col>*/}
             {/*</Row>*/}
             <Row>
-                {/*<Col xl={5}>*/}
-                {/*    <Activity />*/}
-                {/*</Col>*/}
+                <Col xl={6}>
+                    {/*<Activity />*/}
+                    <StepChart />
+                </Col>
 
-                {/*<Col xl={4} md={12}>*/}
-                {/*    <Status />*/}
-                {/*</Col>*/}
+                <Col xl={6}>
+                    {/*<Status />*/}
+                    <DonutChart />
+                </Col>
             </Row>
         </React.Fragment>
     );

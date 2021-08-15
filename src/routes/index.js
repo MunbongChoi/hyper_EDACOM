@@ -135,25 +135,25 @@ const rootRoute = {
 // dashboards
 const dashboardRoutes = {
     path: '/dashboard',
-    name: 'Dashboards',
+    name: 'Newton',
     icon: 'uil-home-alt',
     header: 'Navigation',
     children: [
         {
             path: '/dashboard/analytics',
-            name: 'Analytics',
+            name: '요금제',
             component: AnalyticsDashboard,
             route: PrivateRoute,
         },
         {
             path: '/dashboard/crm',
-            name: 'CRM',
+            name: '전력사용량',
             component: CRMDashboard,
             route: PrivateRoute,
         },
         {
             path: '/dashboard/ecommerce',
-            name: 'Ecommerce',
+            name: 'Home',
             badge: {
                 variant: 'success',
                 text: '3',
@@ -163,7 +163,7 @@ const dashboardRoutes = {
         },
         {
             path: '/dashboard/project',
-            name: 'Project',
+            name: '그린포인트',
             component: ProjectDashboard,
             route: PrivateRoute,
         },
@@ -171,168 +171,168 @@ const dashboardRoutes = {
 };
 
 const calendarAppRoutes = {
-    path: '/apps/calendar',
-    name: 'Calendar',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'uil-calender',
-    component: CalendarApp,
-    header: 'Apps',
+    // path: '/apps/calendar',
+    // name: 'Calendar',
+    // route: PrivateRoute,
+    // roles: ['Admin'],
+    // icon: 'uil-calender',
+    // component: CalendarApp,
+    // header: 'Apps',
 };
 
 const chatAppRoutes = {
-    path: '/apps/chat',
-    name: 'Chat',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'uil-comments-alt',
-    component: ChatApp,
+    // path: '/apps/chat',
+    // name: 'Chat',
+    // route: PrivateRoute,
+    // roles: ['Admin'],
+    // icon: 'uil-comments-alt',
+    // component: ChatApp,
 };
 
 const ecommerceAppRoutes = {
-    path: '/apps/ecommerce',
-    name: 'eCommerce',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'uil-store',
-    children: [
-        {
-            path: '/apps/ecommerce/products',
-            name: 'Products',
-            component: EcommerceProducts,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/ecommerce/details',
-            name: 'Product Details',
-            component: ProductDetails,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/ecommerce/orders',
-            name: 'Orders',
-            component: Orders,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/ecommerce/order/details',
-            name: 'Order Details',
-            component: OrderDetails,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/ecommerce/customers',
-            name: 'Customers',
-            component: Customers,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/ecommerce/shopping-cart',
-            name: 'Shopping Cart',
-            component: Cart,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/ecommerce/checkout',
-            name: 'Checkout',
-            component: Checkout,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/ecommerce/sellers',
-            name: 'Sellers',
-            component: Sellers,
-            route: PrivateRoute,
-        },
-    ],
+    // path: '/apps/ecommerce',
+    // name: 'eCommerce',
+    // route: PrivateRoute,
+    // roles: ['Admin'],
+    // icon: 'uil-store',
+    // children: [
+    //     {
+    //         path: '/apps/ecommerce/products',
+    //         name: 'Products',
+    //         component: EcommerceProducts,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/ecommerce/details',
+    //         name: 'Product Details',
+    //         component: ProductDetails,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/ecommerce/orders',
+    //         name: 'Orders',
+    //         component: Orders,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/ecommerce/order/details',
+    //         name: 'Order Details',
+    //         component: OrderDetails,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/ecommerce/customers',
+    //         name: 'Customers',
+    //         component: Customers,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/ecommerce/shopping-cart',
+    //         name: 'Shopping Cart',
+    //         component: Cart,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/ecommerce/checkout',
+    //         name: 'Checkout',
+    //         component: Checkout,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/ecommerce/sellers',
+    //         name: 'Sellers',
+    //         component: Sellers,
+    //         route: PrivateRoute,
+    //     },
+    // ],
 };
 
 const emailAppRoutes = {
-    path: '/apps/email',
-    name: 'Email',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'uil-envelope',
-    children: [
-        {
-            path: '/apps/email/inbox',
-            name: 'Inbox',
-            component: Inbox,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/email/details',
-            name: 'Email Details',
-            component: EmailDetail,
-            route: PrivateRoute,
-        },
-    ],
+    // path: '/apps/email',
+    // name: 'Email',
+    // route: PrivateRoute,
+    // roles: ['Admin'],
+    // icon: 'uil-envelope',
+    // children: [
+    //     {
+    //         path: '/apps/email/inbox',
+    //         name: 'Inbox',
+    //         component: Inbox,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/email/details',
+    //         name: 'Email Details',
+    //         component: EmailDetail,
+    //         route: PrivateRoute,
+    //     },
+    // ],
 };
 
 const projectAppRoutes = {
-    path: '/apps/projects',
-    name: 'Projects',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'uil-briefcase',
-
-    children: [
-        {
-            path: '/apps/projects/list',
-            name: 'List',
-            component: Projects,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/projects/:id/details',
-            name: 'Detail',
-            component: ProjectDetail,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/projects/gantt',
-            name: 'Gantt',
-            component: ProjectGannt,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/projects/new',
-            name: 'Create Project',
-            component: ProjectForm,
-            route: PrivateRoute,
-        },
-    ],
+    // path: '/apps/projects',
+    // name: 'Projects',
+    // route: PrivateRoute,
+    // roles: ['Admin'],
+    // icon: 'uil-briefcase',
+    //
+    // children: [
+    //     {
+    //         path: '/apps/projects/list',
+    //         name: 'List',
+    //         component: Projects,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/projects/:id/details',
+    //         name: 'Detail',
+    //         component: ProjectDetail,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/projects/gantt',
+    //         name: 'Gantt',
+    //         component: ProjectGannt,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/projects/new',
+    //         name: 'Create Project',
+    //         component: ProjectForm,
+    //         route: PrivateRoute,
+    //     },
+    // ],
 };
 
 const socialAppRoutes = {
-    path: '/apps/social',
-    name: 'Social Feed',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'uil-rss',
-    component: SocialFeed,
+    // path: '/apps/social',
+    // name: 'Social Feed',
+    // route: PrivateRoute,
+    // roles: ['Admin'],
+    // icon: 'uil-rss',
+    // component: SocialFeed,
 };
 
 const taskAppRoutes = {
-    path: '/apps/tasks',
-    name: 'Tasks',
-    route: PrivateRoute,
-    roles: ['Admin'],
-    icon: 'uil-clipboard-alt',
-    children: [
-        {
-            path: '/apps/tasks/list',
-            name: 'Task List',
-            component: TaskList,
-            route: PrivateRoute,
-        },
-        {
-            path: '/apps/tasks/kanban',
-            name: 'Kanban',
-            component: Kanban,
-            route: PrivateRoute,
-        },
-    ],
+    // path: '/apps/tasks',
+    // name: 'Tasks',
+    // route: PrivateRoute,
+    // roles: ['Admin'],
+    // icon: 'uil-clipboard-alt',
+    // children: [
+    //     {
+    //         path: '/apps/tasks/list',
+    //         name: 'Task List',
+    //         component: TaskList,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/apps/tasks/kanban',
+    //         name: 'Kanban',
+    //         component: Kanban,
+    //         route: PrivateRoute,
+    //     },
+    // ],
 };
 
 const appRoutes = [
@@ -347,366 +347,366 @@ const appRoutes = [
 
 // pages
 const pageRoutes = {
-    path: '/pages',
-    name: 'Pages',
-    icon: 'uil-copy-alt',
-    header: 'Custom',
-    children: [
-        {
-            path: '/pages/starter',
-            name: 'Starter',
-            component: Starter,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/profile',
-            name: 'Profile',
-            component: Profile,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/invoice',
-            name: 'Invoice',
-            component: Invoice,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/faq',
-            name: 'FAQ',
-            component: FAQ,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/pricing',
-            name: 'Pricing',
-            component: Pricing,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/error-404',
-            name: 'Error - 404',
-            component: ErrorPageNotFound,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/error-500',
-            name: 'Error - 500',
-            component: ServerError,
-            route: PrivateRoute,
-        },
-        {
-            path: '/pages/timeline',
-            name: 'Timeline',
-            component: Timeline,
-            route: PrivateRoute,
-        },
-    ],
+    // path: '/pages',
+    // name: 'Pages',
+    // icon: 'uil-copy-alt',
+    // header: 'Custom',
+    // children: [
+    //     {
+    //         path: '/pages/starter',
+    //         name: 'Starter',
+    //         component: Starter,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/pages/profile',
+    //         name: 'Profile',
+    //         component: Profile,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/pages/invoice',
+    //         name: 'Invoice',
+    //         component: Invoice,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/pages/faq',
+    //         name: 'FAQ',
+    //         component: FAQ,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/pages/pricing',
+    //         name: 'Pricing',
+    //         component: Pricing,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/pages/error-404',
+    //         name: 'Error - 404',
+    //         component: ErrorPageNotFound,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/pages/error-500',
+    //         name: 'Error - 500',
+    //         component: ServerError,
+    //         route: PrivateRoute,
+    //     },
+    //     {
+    //         path: '/pages/timeline',
+    //         name: 'Timeline',
+    //         component: Timeline,
+    //         route: PrivateRoute,
+    //     },
+    // ],
 };
 
 // auth
 const authRoutes = {
-    path: '/account',
-    name: 'Auth',
-    children: [
-        {
-            path: '/account/login',
-            name: 'Login',
-            component: Login,
-            route: Route,
-        },
-        {
-            path: '/account/logout',
-            name: 'Logout',
-            component: Logout,
-            route: Route,
-        },
-        {
-            path: '/account/register',
-            name: 'Register',
-            component: Register,
-            route: Route,
-        },
-        {
-            path: '/account/confirm',
-            name: 'Confirm',
-            component: Confirm,
-            route: Route,
-        },
-        {
-            path: '/account/forget-password',
-            name: 'Forget Password',
-            component: ForgetPassword,
-            route: Route,
-        },
-    ],
+    // path: '/account',
+    // name: 'Auth',
+    // children: [
+    //     {
+    //         path: '/account/login',
+    //         name: 'Login',
+    //         component: Login,
+    //         route: Route,
+    //     },
+    //     {
+    //         path: '/account/logout',
+    //         name: 'Logout',
+    //         component: Logout,
+    //         route: Route,
+    //     },
+    //     {
+    //         path: '/account/register',
+    //         name: 'Register',
+    //         component: Register,
+    //         route: Route,
+    //     },
+    //     {
+    //         path: '/account/confirm',
+    //         name: 'Confirm',
+    //         component: Confirm,
+    //         route: Route,
+    //     },
+    //     {
+    //         path: '/account/forget-password',
+    //         name: 'Forget Password',
+    //         component: ForgetPassword,
+    //         route: Route,
+    //     },
+    // ],
 };
 
 // ui
 const uiRoutes = {
-    path: '/ui',
-    name: 'Components',
-    icon: 'uil-package',
-    header: 'UI Elements',
-    children: [
-        {
-            path: '/ui/base',
-            name: 'Base UI',
-            children: [
-                {
-                    path: '/ui/accordions',
-                    name: 'Accordions',
-                    component: Accordions,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/alerts',
-                    name: 'Alerts',
-                    component: Alerts,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/badges',
-                    name: 'Badges',
-                    component: Badges,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/buttons',
-                    name: 'Buttons',
-                    component: Buttons,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/cards',
-                    name: 'Cards',
-                    component: Cards,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/carousel',
-                    name: 'Carousel',
-                    component: Carousel,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/dropdowns',
-                    name: 'Dropdowns',
-                    component: Dropdowns,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/grid',
-                    name: 'Grid',
-                    component: Grid,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/listgroups',
-                    name: 'List Groups',
-                    component: ListGroups,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/modals',
-                    name: 'Modals',
-                    component: Modals,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/popovers',
-                    name: 'Popovers',
-                    component: Popovers,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/progress',
-                    name: 'Progress',
-                    component: Progress,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/ribbons',
-                    name: 'Ribbons',
-                    component: Ribbons,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/spinners',
-                    name: 'Spinners',
-                    component: Spinners,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/tabs',
-                    name: 'Tabs',
-                    component: Tabs,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/toasts',
-                    name: 'Toasts',
-                    component: Toasts,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/tooltips',
-                    name: 'Tooltips',
-                    component: Tooltips,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/typography',
-                    name: 'Typography',
-                    component: Typography,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/widgets',
-                    name: 'Widgets',
-                    component: Widgets,
-                    route: PrivateRoute,
-                },
-            ],
-        },
-        {
-            path: '/ui/extended',
-            name: 'Extended UI',
-            children: [
-                {
-                    path: '/ui/dragdrop',
-                    name: 'Drag and Drop',
-                    component: DragDrop,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/rangesliders',
-                    name: 'Range Sliders',
-                    component: RangeSliders,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/ratings',
-                    name: 'Ratings',
-                    component: Ratings,
-                    route: PrivateRoute,
-                },
-            ],
-        },
-        {
-            path: '/ui/icons',
-            name: 'Icons',
-            children: [
-                {
-                    path: '/ui/icons/dripicons',
-                    name: 'Dripicons',
-                    component: Dripicons,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/icons/mdi',
-                    name: 'Material Design',
-                    component: MDIIcons,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/icons/unicons',
-                    name: 'Unicons',
-                    component: Unicons,
-                    route: Unicons,
-                },
-            ],
-        },
-        {
-            path: '/ui/forms',
-            name: 'Forms',
-            children: [
-                {
-                    path: '/ui/forms/basic',
-                    name: 'Basic Elements',
-                    component: BasicForms,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/forms/advanced',
-                    name: 'Form Advanced',
-                    component: FormAdvanced,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/forms/validation',
-                    name: 'Form Validation',
-                    component: FormValidation,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/forms/wizard',
-                    name: 'Form Wizard',
-                    component: FormWizard,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/forms/upload',
-                    name: 'File Upload',
-                    component: FileUpload,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/forms/editors',
-                    name: 'Editors',
-                    component: Editors,
-                    route: PrivateRoute,
-                },
-            ],
-        },
-        {
-            path: '/ui/charts',
-            name: 'Charts',
-            children: [
-                {
-                    path: '/ui/charts/apex',
-                    name: 'Apex',
-                    component: ApexChart,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/charts/brite',
-                    name: 'Brite',
-                    component: BriteChart,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/charts/chartjs',
-                    name: 'Chartjs',
-                    component: ChartJs,
-                    route: PrivateRoute,
-                },
-            ],
-        },
-        {
-            path: '/ui/tables',
-            name: 'Tables',
-            children: [
-                {
-                    path: '/ui/tables/basic',
-                    name: 'Basic',
-                    component: BasicTables,
-                    route: PrivateRoute,
-                },
-                {
-                    path: '/ui/tables/advanced',
-                    name: 'Advanced',
-                    component: AdvancedTables,
-                    route: PrivateRoute,
-                },
-            ],
-        },
-        {
-            path: '/ui/googlemaps',
-            name: 'Google Maps',
-            component: GoogleMaps,
-            route: PrivateRoute,
-        },
-    ],
+    // path: '/ui',
+    // name: 'Components',
+    // icon: 'uil-package',
+    // header: 'UI Elements',
+    // children: [
+    //     {
+    //         path: '/ui/base',
+    //         name: 'Base UI',
+    //         children: [
+    //             {
+    //                 path: '/ui/accordions',
+    //                 name: 'Accordions',
+    //                 component: Accordions,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/alerts',
+    //                 name: 'Alerts',
+    //                 component: Alerts,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/badges',
+    //                 name: 'Badges',
+    //                 component: Badges,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/buttons',
+    //                 name: 'Buttons',
+    //                 component: Buttons,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/cards',
+    //                 name: 'Cards',
+    //                 component: Cards,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/carousel',
+    //                 name: 'Carousel',
+    //                 component: Carousel,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/dropdowns',
+    //                 name: 'Dropdowns',
+    //                 component: Dropdowns,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/grid',
+    //                 name: 'Grid',
+    //                 component: Grid,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/listgroups',
+    //                 name: 'List Groups',
+    //                 component: ListGroups,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/modals',
+    //                 name: 'Modals',
+    //                 component: Modals,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/popovers',
+    //                 name: 'Popovers',
+    //                 component: Popovers,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/progress',
+    //                 name: 'Progress',
+    //                 component: Progress,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/ribbons',
+    //                 name: 'Ribbons',
+    //                 component: Ribbons,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/spinners',
+    //                 name: 'Spinners',
+    //                 component: Spinners,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/tabs',
+    //                 name: 'Tabs',
+    //                 component: Tabs,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/toasts',
+    //                 name: 'Toasts',
+    //                 component: Toasts,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/tooltips',
+    //                 name: 'Tooltips',
+    //                 component: Tooltips,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/typography',
+    //                 name: 'Typography',
+    //                 component: Typography,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/widgets',
+    //                 name: 'Widgets',
+    //                 component: Widgets,
+    //                 route: PrivateRoute,
+    //             },
+    //         ],
+    //     },
+    //     {
+    //         path: '/ui/extended',
+    //         name: 'Extended UI',
+    //         children: [
+    //             {
+    //                 path: '/ui/dragdrop',
+    //                 name: 'Drag and Drop',
+    //                 component: DragDrop,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/rangesliders',
+    //                 name: 'Range Sliders',
+    //                 component: RangeSliders,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/ratings',
+    //                 name: 'Ratings',
+    //                 component: Ratings,
+    //                 route: PrivateRoute,
+    //             },
+    //         ],
+    //     },
+    //     {
+    //         path: '/ui/icons',
+    //         name: 'Icons',
+    //         children: [
+    //             {
+    //                 path: '/ui/icons/dripicons',
+    //                 name: 'Dripicons',
+    //                 component: Dripicons,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/icons/mdi',
+    //                 name: 'Material Design',
+    //                 component: MDIIcons,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/icons/unicons',
+    //                 name: 'Unicons',
+    //                 component: Unicons,
+    //                 route: Unicons,
+    //             },
+    //         ],
+    //     },
+    //     {
+    //         path: '/ui/forms',
+    //         name: 'Forms',
+    //         children: [
+    //             {
+    //                 path: '/ui/forms/basic',
+    //                 name: 'Basic Elements',
+    //                 component: BasicForms,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/forms/advanced',
+    //                 name: 'Form Advanced',
+    //                 component: FormAdvanced,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/forms/validation',
+    //                 name: 'Form Validation',
+    //                 component: FormValidation,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/forms/wizard',
+    //                 name: 'Form Wizard',
+    //                 component: FormWizard,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/forms/upload',
+    //                 name: 'File Upload',
+    //                 component: FileUpload,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/forms/editors',
+    //                 name: 'Editors',
+    //                 component: Editors,
+    //                 route: PrivateRoute,
+    //             },
+    //         ],
+    //     },
+    //     {
+    //         path: '/ui/charts',
+    //         name: 'Charts',
+    //         children: [
+    //             {
+    //                 path: '/ui/charts/apex',
+    //                 name: 'Apex',
+    //                 component: ApexChart,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/charts/brite',
+    //                 name: 'Brite',
+    //                 component: BriteChart,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/charts/chartjs',
+    //                 name: 'Chartjs',
+    //                 component: ChartJs,
+    //                 route: PrivateRoute,
+    //             },
+    //         ],
+    //     },
+    //     {
+    //         path: '/ui/tables',
+    //         name: 'Tables',
+    //         children: [
+    //             {
+    //                 path: '/ui/tables/basic',
+    //                 name: 'Basic',
+    //                 component: BasicTables,
+    //                 route: PrivateRoute,
+    //             },
+    //             {
+    //                 path: '/ui/tables/advanced',
+    //                 name: 'Advanced',
+    //                 component: AdvancedTables,
+    //                 route: PrivateRoute,
+    //             },
+    //         ],
+    //     },
+    //     {
+    //         path: '/ui/googlemaps',
+    //         name: 'Google Maps',
+    //         component: GoogleMaps,
+    //         route: PrivateRoute,
+    //     },
+    // ],
 };
 
 // flatten the list of all nested routes

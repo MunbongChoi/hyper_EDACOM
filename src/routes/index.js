@@ -405,40 +405,40 @@ const pageRoutes = {
 
 // auth
 const authRoutes = {
-    // path: '/account',
-    // name: 'Auth',
-    // children: [
-    //     {
-    //         path: '/account/login',
-    //         name: 'Login',
-    //         component: Login,
-    //         route: Route,
-    //     },
-    //     {
-    //         path: '/account/logout',
-    //         name: 'Logout',
-    //         component: Logout,
-    //         route: Route,
-    //     },
-    //     {
-    //         path: '/account/register',
-    //         name: 'Register',
-    //         component: Register,
-    //         route: Route,
-    //     },
-    //     {
-    //         path: '/account/confirm',
-    //         name: 'Confirm',
-    //         component: Confirm,
-    //         route: Route,
-    //     },
-    //     {
-    //         path: '/account/forget-password',
-    //         name: 'Forget Password',
-    //         component: ForgetPassword,
-    //         route: Route,
-    //     },
-    // ],
+    path: '/account',
+    name: 'Auth',
+    children: [
+        {
+            path: '/account/login',
+            name: 'Login',
+            component: Login,
+            route: Route,
+        },
+        {
+            path: '/account/logout',
+            name: 'Logout',
+            component: Logout,
+            route: Route,
+        },
+        {
+            path: '/account/register',
+            name: 'Register',
+            component: Register,
+            route: Route,
+        },
+        {
+            path: '/account/confirm',
+            name: 'Confirm',
+            component: Confirm,
+            route: Route,
+        },
+        {
+            path: '/account/forget-password',
+            name: 'Forget Password',
+            component: ForgetPassword,
+            route: Route,
+        },
+    ],
 };
 
 // ui

@@ -74,9 +74,6 @@ const MenuItemLink = ({ item, className }) => {
     );
 };
 
-/**
- * Renders the application menu
- */
 type Props = {
     initMenu: PropTypes.func,
     changeActiveMenuFromLocation: PropTypes.func,
@@ -153,9 +150,6 @@ class AppMenu extends Component<Props> {
                 : []
             : [] || [];
 
-        /**
-         * Horizontal layout - We are controlling how many menu items can be displayed in it
-         */
         let menuItems = this.props.menu && this.props.menu.menuItems ? this.props.menu.menuItems : [];
         const defaultDisplayedItems = window.screen.width > 1366 ? 7 : 5;
 

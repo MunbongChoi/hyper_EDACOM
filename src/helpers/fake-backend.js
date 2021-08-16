@@ -29,8 +29,7 @@ export function configureFakeBackend() {
                         };
                         resolve({ ok: true, json: () => responseJson });
                     } else {
-                        // else return error
-                        reject('Username or password is incorrect');
+                        reject('사용자 이름 혹은 사용자 비밀번호가 틀렸습니다.');
                     }
                     return;
                 }
@@ -77,12 +76,12 @@ export function configureFakeBackend() {
 
                     if (filteredUsers.length) {
                         let responseJson = {
-                            message: "We've sent you a link to reset password to your registered email.",
+                            message: "이메일로 변경할 메일을 전송했습니다.",
                         };
                         resolve({ ok: true, json: () => responseJson });
                     } else {
                         // else return error
-                        reject('Sorry, we could not find any registered user with entered username');
+                        reject('사용자 이름을 찾을 수 없습니다.');
                     }
                     return;
                 }

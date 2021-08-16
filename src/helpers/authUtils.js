@@ -2,9 +2,6 @@
 import jwtDecode from 'jwt-decode';
 import { Cookies } from 'react-cookie';
 
-/**
- * Checks if user is authenticated
- */
 const isUserAuthenticated = () => {
     const user = getLoggedInUser();
     if (!user) {
@@ -20,9 +17,6 @@ const isUserAuthenticated = () => {
     }
 };
 
-/**
- * Returns the logged in user
- */
 const getLoggedInUser = () => {
     const cookies = new Cookies();
     const user = cookies.get('user');

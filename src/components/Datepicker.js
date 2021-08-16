@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import DatePicker from 'react-datepicker';
@@ -8,6 +8,8 @@ type DatepickerInputProps = {
     onClick?: PropTypes.func,
     value?: string,
 };
+
+
 class DatepickerInput extends Component<DatepickerInputProps> {
     constructor(props) {
         super(props);
@@ -18,6 +20,8 @@ class DatepickerInput extends Component<DatepickerInputProps> {
     onDateValueChange = () => {
         console.log('date value changed');
     };
+
+
     render() {
         return (
             <input
@@ -30,6 +34,7 @@ class DatepickerInput extends Component<DatepickerInputProps> {
             />
         );
     }
+
 }
 
 type DatepickerInputWithAddonProps = {

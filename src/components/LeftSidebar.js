@@ -105,7 +105,7 @@ class LeftSidebar extends Component<LeftSidebarProps> {
     render() {
         const isCondensed = this.props.isCondensed || false;
         const isLight = this.props.isLight || false;
-        const hideLogo = this.props.hideLogo || false;
+        const hideLogo = this.props.hideLogo || true;
         const hideUserProfile = this.props.hideUserProfile || false;
 
         return (

@@ -106,14 +106,8 @@ const ProfileMenus = [
 // dummy search results
 const SearchResults = [
     {
-        id: 1,
-        title: '어제와 오늘의 전력사용량을 비교하고 싶을땐?',
-        icon: 'uil-notes',
-        redirectTo: '/dashboard/crm'
-    },
-    {
         id: 2,
-        title: '전력사용량을 예측하고 싶을 땐?',
+        title: '내일의 전력량을 알고 싶을땐?',
         icon: 'uil-life-ring',
         redirectTo: '/dashboard/crm'
     },

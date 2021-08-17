@@ -13,6 +13,7 @@ import Calendar from './Calendar';
 import Basictable from "./Basic2";
 import StepChart from "../../charts/Brite/StepChart";
 import DonutChart from "../../charts/Apex/DonutChart";
+import MapContainer from "./MapContainer";
 ///////////////////////////////////////////
 import GoogleMaps2 from "./GoogleMaps2";
 ////////////////////////////////////////
@@ -31,7 +32,7 @@ const ProjectDashboardPage = () => {
             <Statistics />
             <Row>
                 <Col xl={5}>
-                    <GoogleMaps2 />
+                    <MapContainer />
                 </Col>
                 <Col xl={7}>
                     <Basictable />

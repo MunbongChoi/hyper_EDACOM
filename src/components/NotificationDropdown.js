@@ -64,15 +64,15 @@ class NotificationDropdown extends Component<NotificationDropdownProps, Notifica
     render() {
         return (
             <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropdown}>
-                <DropdownToggle
-                    data-toggle="dropdown"
-                    tag="button"
-                    className="nav-link dropdown-toggle arrow-none btn btn-link"
-                    onClick={this.toggleDropdown}
-                    aria-expanded={this.state.dropdownOpen}>
-                    <i className="mdi mdi-bell-outline noti-icon"></i>
-                    <span className="noti-icon-badge"></span>
-                </DropdownToggle>
+                {/*<DropdownToggle*/}
+                {/*    data-toggle="dropdown"*/}
+                {/*    tag="button"*/}
+                {/*    className="nav-link dropdown-toggle arrow-none btn btn-link"*/}
+                {/*    onClick={this.toggleDropdown}*/}
+                {/*    aria-expanded={this.state.dropdownOpen}>*/}
+                {/*    <i className="mdi mdi-bell-outline noti-icon"></i>*/}
+                {/*    <span className="noti-icon-badge"></span>*/}
+                {/*</DropdownToggle>*/}
                 <DropdownMenu right className="dropdown-menu-animated dropdown-lg">
                     <div onClick={this.toggleDropdown}>
                         <div className="dropdown-item noti-title">
@@ -85,28 +85,28 @@ class NotificationDropdown extends Component<NotificationDropdownProps, Notifica
                                 Notification
                             </h5>
                         </div>
-                        <SimpleBar style={this.state.notificationContainerStyle}>
-                            {this.props.notifications.map((item, i) => {
-                                return (
-                                    <Link
-                                        to={this.getRedirectUrl(item)}
-                                        className="dropdown-item notify-item"
-                                        key={i + '-noti'}>
-                                        <div className={`notify-icon bg-${item.bgColor}`}>
-                                            <i className={item.icon}></i>
-                                        </div>
-                                        <p className="notify-details">
-                                            {item.text}
-                                            <small className="text-muted">{item.subText}</small>
-                                        </p>
-                                    </Link>
-                                );
-                            })}
-                        </SimpleBar>
+                        {/*<SimpleBar style={this.state.notificationContainerStyle}>*/}
+                        {/*    {this.props.notifications.map((item, i) => {*/}
+                        {/*        return (*/}
+                        {/*            <Link*/}
+                        {/*                to={this.getRedirectUrl(item)}*/}
+                        {/*                className="dropdown-item notify-item"*/}
+                        {/*                key={i + '-noti'}>*/}
+                        {/*                <div className={`notify-icon bg-${item.bgColor}`}>*/}
+                        {/*                    <i className={item.icon}></i>*/}
+                        {/*                </div>*/}
+                        {/*                <p className="notify-details">*/}
+                        {/*                    {item.text}*/}
+                        {/*                    <small className="text-muted">{item.subText}</small>*/}
+                        {/*                </p>*/}
+                        {/*            </Link>*/}
+                        {/*        );*/}
+                        {/*    })}*/}
+                        {/*</SimpleBar>*/}
 
-                        <Link to="/" className="dropdown-item text-center text-primary notify-item notify-all">
-                            View All
-                        </Link>
+                        {/*<Link to="/" className="dropdown-item text-center text-primary notify-item notify-all">*/}
+                        {/*    View All*/}
+                        {/*</Link>*/}
                     </div>
                 </DropdownMenu>
             </Dropdown>

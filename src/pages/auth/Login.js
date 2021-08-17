@@ -120,7 +120,7 @@ class Login extends Component {
                                                 </FormGroup>
 
                                                 <p>
-                                                    <strong>Username:</strong>test  &nbsp;&nbsp;{' '}
+                                                    <strong>ID:</strong>test  &nbsp;&nbsp;{' '}
                                                     <strong>Password:</strong>test
                                                 </p>
                                             </AvForm>

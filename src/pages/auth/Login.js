@@ -8,7 +8,7 @@ import { AvForm, AvField, AvGroup, AvInput, AvFeedback } from 'availity-reactstr
 import { loginUser } from '../../redux/actions';
 import { isUserAuthenticated } from '../../helpers/authUtils';
 import LoaderWidget from '../../components/Loader';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/Newton_logo2.png';
 
 class Login extends Component {
     _isMounted = false;
@@ -18,8 +18,8 @@ class Login extends Component {
 
         this.handleValidSubmit = this.handleValidSubmit.bind(this);
         this.state = {
-            username: 'test',
-            password: 'test',
+            username: '',
+            password: '',
         };
     }
 
@@ -63,7 +63,7 @@ class Login extends Component {
                                         <div className="card-header pt-4 pb-4 text-center bg-primary">
                                             <Link to="/">
                                                 <span>
-                                                    <img src={logo} alt="" height="18" />
+                                                    <img src={logo} alt="" height="80" />
                                                 </span>
                                             </Link>
                                         </div>
@@ -77,7 +77,8 @@ class Login extends Component {
                                                     Sign In
                                                 </h4>
                                                 <p className="text-muted mb-4">
-                                                    Enter your username and password to access admin panel.
+                                                    탄소중립을 이끄는 전력관리 서비스!
+                                                    Newton 입니다.
                                                 </p>
                                             </div>
 
@@ -90,8 +91,8 @@ class Login extends Component {
                                             <AvForm onValidSubmit={this.handleValidSubmit}>
                                                 <AvField
                                                     name="username"
-                                                    label="Username"
-                                                    placeholder="Enter your username"
+                                                    label="ID"
+                                                    placeholder="ID를 입력하세요"
                                                     value={this.state.username}
                                                     required
                                                 />
@@ -107,7 +108,7 @@ class Login extends Component {
                                                         type="password"
                                                         name="password"
                                                         id="password"
-                                                        placeholder="Enter your password"
+                                                        placeholder="패스워드를 입력하세요"
                                                         value={this.state.password}
                                                         required
                                                     />
@@ -119,8 +120,8 @@ class Login extends Component {
                                                 </FormGroup>
 
                                                 <p>
-                                                    <strong>Username:</strong> test &nbsp;&nbsp;{' '}
-                                                    <strong>Password:</strong> test
+                                                    <strong>Username:</strong>test  &nbsp;&nbsp;{' '}
+                                                    <strong>Password:</strong>test
                                                 </p>
                                             </AvForm>
                                         </CardBody>

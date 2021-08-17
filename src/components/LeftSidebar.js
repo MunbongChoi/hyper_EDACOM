@@ -7,7 +7,7 @@ import SimpleBar from 'simplebar-react';
 import logoSm from '../assets/images/logo_sm.png';
 import logoDark from '../assets/images/logo-dark.png';
 import logoDarkSm from '../assets/images/logo_sm_dark.png';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/Newton_logo.png';
 import helpBoxImage from '../assets/images/help-icon.svg';
 import profileImg from '../assets/images/users/avatar-1.jpg';
 
@@ -94,7 +94,7 @@ class LeftSidebar extends Component<LeftSidebarProps> {
     render() {
         const isCondensed = this.props.isCondensed || false;
         const isLight = this.props.isLight || false;
-        const hideLogo = this.props.hideLogo || true;
+        const hideLogo = this.props.hideLogo || false;
         const hideUserProfile = this.props.hideUserProfile || false;
 
         return (
@@ -103,7 +103,7 @@ class LeftSidebar extends Component<LeftSidebarProps> {
                     {!hideLogo && (<React.Fragment>
                         <Link to="/" className="logo text-center logo-light">
                             <span className="logo-lg">
-                                <img src={isLight ? logoDark : logo} alt="logo" height="16" />
+                                <img src={isLight ? logoDark : logo} alt="logo" height="180" />
                             </span>
                             <span className="logo-sm">
                                 <img src={isLight ? logoSm : logoDarkSm} alt="logo" height="16" />

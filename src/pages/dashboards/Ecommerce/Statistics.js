@@ -9,12 +9,12 @@ const Statistics = () => {
     return (
         <React.Fragment>
             <Row>
-                <Col>
+                <Col xl={6}>
                     <StatisticsWidget
                         icon="mdi mdi-account-multiple"
                         description="Number of Customers"
                         title="탄소배출량"
-                        stats="36.254"
+                        stats="0"
                         trend={{
                             textClass: 'text-success',
                             icon: 'mdi mdi-arrow-up-bold',
@@ -22,29 +22,12 @@ const Statistics = () => {
                             time: 'Since last month',
                         }}></StatisticsWidget>
                 </Col>
-
-                {/*<Col lg={6}>*/}
-                {/*    <StatisticsWidget*/}
-                {/*        icon="mdi mdi-cart-plus"*/}
-                {/*        description="Number of Orders"*/}
-                {/*        title="Orders"*/}
-                {/*        stats="5,543"*/}
-                {/*        trend={{*/}
-                {/*            textClass: 'text-danger',*/}
-                {/*            icon: 'mdi mdi-arrow-down-bold',*/}
-                {/*            value: '1.08%',*/}
-                {/*            time: 'Since last month',*/}
-                {/*        }}></StatisticsWidget>*/}
-                {/*</Col>*/}
-            </Row>
-
-            <Row>
-                <Col lg={12}>
-                    <StatisticsWidget
+                <Col>
+                   <StatisticsWidget
                         icon="mdi mdi-currency-usd"
                         description="Revenue"
                         title="적립된 포인트"
-                        stats="30P"
+                        stats="0P"
                         trend={{
                             textClass: 'text-danger',
                             icon: 'mdi mdi-arrow-down-bold',
@@ -52,20 +35,6 @@ const Statistics = () => {
                             time: 'Since last month',
                         }}></StatisticsWidget>
                 </Col>
-
-            {/*    <Col lg={6}>*/}
-            {/*        <StatisticsWidget*/}
-            {/*            icon="mdi mdi-pulse"*/}
-            {/*            description="Growth"*/}
-            {/*            title="Growth"*/}
-            {/*            stats="+ 30.56%"*/}
-            {/*            trend={{*/}
-            {/*                textClass: 'text-success',*/}
-            {/*                icon: 'mdi mdi-arrow-up-bold',*/}
-            {/*                value: '4.87%%',*/}
-            {/*                time: 'Since last month',*/}
-            {/*            }}></StatisticsWidget>*/}
-            {/*    </Col>*/}
             </Row>
         </React.Fragment>
     );

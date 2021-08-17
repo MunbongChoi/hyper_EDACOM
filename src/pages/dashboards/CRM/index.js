@@ -24,35 +24,24 @@ const CRMDashboardPage = () => {
                 title={'전력사용량'}
             />
 
-            {/*<Statistics />*/}
 
             <Row>
-                {/*<Col xl={5}>*/}
-                {/*    <CampaignsChart />*/}
-                {/*</Col>*/}
                 <Col xl={12}>
                     <RevenueChart />
                 </Col>
             </Row>
-
             <Row>
-                 <Col xl={8} lg={4}>
+                 <Col xl={12}>
                     <RevenuChart2 />
                 </Col>
-                {/*<Col xl={4} lg={4}>*/}
-                {/*    <Performers />*/}
-                {/*</Col>*/}
-                {/*<Col xl={4} lg={4}>*/}
-                {/*    <Leads />*/}
-                {/*</Col>*/}
-                <Col xl={4} lg={4}>
-                    {/*<CampaignWidget />*/}
+            </Row>
+            <Row>
+                 <Col xl={12}>
                     <Statistics2 />
                 </Col>
             </Row>
-
             <Row>
-                 <Col xl={12} lg={4}>
+                 <Col xl={12}>
                     <PerformanceChart2 />
                 </Col>
             </Row>

@@ -36,40 +36,21 @@ const AnalyticsDashboardPage = () => {
             </Row>
 
             <Row>
-                {/*<Col xl={3} lg={4}>*/}
-                {/*    <Statistics />*/}
-                {/*</Col>*/}
-
-                <Col xl={12} lg={8}>
+                <Col xl={12}>
                     <SessionsChart />
                 </Col>
             </Row>
 
             <Row>
-                <Col xl={7} lg={6}>
-                    {/*<ViewsChart />*/}
+                <Col xl={12}>
                     <PerformanceChart />
                 </Col>
-                {/*<Col xl={4} lg={6}>*/}
-                {/*    <BrowsersChart />*/}
-                {/*</Col>*/}
-                <Col xl={5} lg={12}>
-                    {/*<OsChart />*/}
+            </Row>
+            <Row>
+                <Col xl={12}>
                     <Channels />
                 </Col>
             </Row>
-
-            {/*<Row>*/}
-            {/*    <Col xl={4} lg={6}>*/}
-            {/*        <Channels />*/}
-            {/*    </Col>*/}
-            {/*    <Col xl={4} lg={6}>*/}
-            {/*        <Social />*/}
-            {/*    </Col>*/}
-            {/*    <Col xl={4} lg={6}>*/}
-            {/*        <Engagement />*/}
-            {/*    </Col>*/}
-            {/*</Row>*/}
         </React.Fragment>
     );
 };

@@ -5,10 +5,10 @@ import { Row, Col, Card, CardBody, Table } from 'reactstrap';
 // import PageTitle from '../../components/PageTitle';
 
 const records = [
-    { id: 1, firstName: <i className="mdi mdi-food-apple"></i>, lastName: '10P', username: '200kW' },
-    { id: 2, firstName: <i className="mdi mdi-tree-outline"></i>, lastName: '5P', username: '210kW' },
-    { id: 3, firstName: <i className="mdi mdi-sprout-outline"></i>, lastName: '3P', username: '220kW' },
-    { id: 4, firstName: <i className="mdi mdi-seed-outline"></i>, lastName: '0P', username: '230kW' },
+    { rank: 1, grade: <i className="mdi mdi-food-apple"></i>, point: '10P', criteria: '200kW' },
+    { rank: 2, grade: <i className="mdi mdi-tree-outline"></i>, point: '5P', criteria: '210kW' },
+    { rank: 3, grade: <i className="mdi mdi-sprout-outline"></i>, point: '3P', criteria: '220kW' },
+    { rank: 4, grade: <i className="mdi mdi-seed-outline"></i>, point: '0P', criteria: '230kW' }
 ];
 
 const BasicTable = () => {
@@ -33,10 +33,10 @@ const BasicTable = () => {
                         {records.map((record, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{record.id}</th>
-                                    <td>{record.firstName}</td>
-                                    <td>{record.lastName}</td>
-                                    <td>{record.username}</td>
+                                    <th scope="row">{record.rank}</th>
+                                    <td>{record.grade}</td>
+                                    <td>{record.point}</td>
+                                    <td>{record.criteria}</td>
                                 </tr>
                             );
                         })}
@@ -70,10 +70,10 @@ const InverseTable = () => {
                         {records.map((record, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{record.id}</th>
-                                    <td>{record.firstName}</td>
-                                    <td>{record.lastName}</td>
-                                    <td>{record.username}</td>
+                                    <th scope="row">{record.rank}</th>
+                                    <td>{record.grade}</td>
+                                    <td>{record.point}</td>
+                                    <td>{record.criteria}</td>
                                 </tr>
                             );
                         })}
@@ -106,10 +106,10 @@ const StripedRowsTable = () => {
                         {records.map((record, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{record.id}</th>
-                                    <td>{record.firstName}</td>
-                                    <td>{record.lastName}</td>
-                                    <td>{record.username}</td>
+                                    <th scope="row">{record.rank}</th>
+                                    <td>{record.grade}</td>
+                                    <td>{record.point}</td>
+                                    <td>{record.criteria}</td>
                                 </tr>
                             );
                         })}
@@ -142,10 +142,10 @@ const BorderedTable = () => {
                         {records.map((record, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{record.id}</th>
-                                    <td>{record.firstName}</td>
-                                    <td>{record.lastName}</td>
-                                    <td>{record.username}</td>
+                                    <th scope="row">{record.rank}</th>
+                                    <td>{record.grade}</td>
+                                    <td>{record.point}</td>
+                                    <td>{record.criteria}</td>
                                 </tr>
                             );
                         })}
@@ -178,10 +178,10 @@ const HoverableTable = () => {
                         {records.map((record, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{record.id}</th>
-                                    <td>{record.firstName}</td>
-                                    <td>{record.lastName}</td>
-                                    <td>{record.username}</td>
+                                    <th scope="row">{record.rank}</th>
+                                    <td>{record.grade}</td>
+                                    <td>{record.point}</td>
+                                    <td>{record.criteria}</td>
                                 </tr>
                             );
                         })}
@@ -214,10 +214,10 @@ const SmallTable = () => {
                         {records.map((record, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{record.id}</th>
-                                    <td>{record.firstName}</td>
-                                    <td>{record.lastName}</td>
-                                    <td>{record.username}</td>
+                                    <th scope="row">{record.rank}</th>
+                                    <td>{record.grade}</td>
+                                    <td>{record.point}</td>
+                                    <td>{record.criteria}</td>
                                 </tr>
                             );
                         })}
@@ -250,10 +250,10 @@ const ResponsiveTable = () => {
                         {records.map((record, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{record.id}</th>
-                                    <td>{record.firstName}</td>
-                                    <td>{record.lastName}</td>
-                                    <td>{record.username}</td>
+                                    <th scope="row">{record.rank}</th>
+                                    <td>{record.grade}</td>
+                                    <td>{record.point}</td>
+                                    <td>{record.criteria}</td>
                                 </tr>
                             );
                         })}

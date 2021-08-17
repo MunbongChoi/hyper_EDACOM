@@ -31,27 +31,18 @@ const ProjectDashboardPage = () => {
             <Statistics />
             <Row>
                 <Col xl={5}>
-                {/*/!*    <Calendar />*!/*/}
                     <GoogleMaps2 />
                 </Col>
                 <Col xl={7}>
                     <Basictable />
                 </Col>
             </Row>
-
-            {/*<Row>*/}
-            {/*    <Col>*/}
-            {/*        <TasksChart />*/}
-            {/*    </Col>*/}
-            {/*</Row>*/}
             <Row>
                 <Col xl={6}>
-                    {/*<Activity />*/}
                     <StepChart />
                 </Col>
 
                 <Col xl={6}>
-                    {/*<Status />*/}
                     <DonutChart />
                 </Col>
             </Row>

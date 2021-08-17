@@ -27,9 +27,9 @@ const StatisticsWidget = (props: StatisticsWidgetProps) => {
                         <i className={classNames(props.icon, 'widget-icon')}></i>
                     </div>
                 )}
-                <h5 className={classNames('font-weight-normal', 'mt-0', textClass)} title={props.description}>
+                <h4 className={classNames("header-title mb-3", 'mt-0', textClass)} title={props.description}>
                     {props.title}
-                </h5>
+                </h4>
                 <h3 className={classNames('mt-3', 'mb-3', textClass)}>{props.stats}</h3>
 
                 {props.trend && (

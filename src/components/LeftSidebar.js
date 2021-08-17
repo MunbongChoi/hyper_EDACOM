@@ -34,17 +34,6 @@ const SideBarContent = ({ hideUserProfile, isLight, menuClickHandler }: SideBarC
 
             <AppMenu menuClickHandler={menuClickHandler} />
 
-            <div className="help-box text-white text-center">
-                <Link to="/" className="float-right close-btn text-white">
-                    <i className="mdi mdi-close" />
-                </Link>
-
-                <img src={helpBoxImage} height="90" alt="Helper Icon" />
-                <h5 className="mt-3">Unlimited Access</h5>
-                <p className="mb-3">Upgrade to plan to get access to unlimited reports</p>
-                <button className="btn btn-outline-light btn-sm">Upgrade</button>
-            </div>
-            <div className="clearfix" />
         </React.Fragment>
     );
 };

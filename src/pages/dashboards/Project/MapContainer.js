@@ -9,7 +9,7 @@ const MapContainer = () => {
         const container = document.getElementById('myMap');
       const options = {
          center: new kakao.maps.LatLng(35.019318, 126.717175),
-         level: 3
+         level: 7
 
       };
           // 마커를 생성
@@ -26,7 +26,7 @@ const MapContainer = () => {
 
     return (
         <div id='myMap' style={{
-            width: '550px',
+            width: '470px',
             height: '340px'
         }}></div>
     );

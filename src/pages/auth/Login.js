@@ -102,7 +102,7 @@ class Login extends Component {
                                                     <Link
                                                         to="/account/forget-password"
                                                         className="text-muted float-right">
-                                                        <small>Forgot your password?</small>
+                                                        <small>패스워드 찾기</small>
                                                     </Link>
                                                     <AvInput
                                                         type="password"

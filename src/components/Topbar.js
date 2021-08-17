@@ -107,32 +107,26 @@ const ProfileMenus = [
 const SearchResults = [
     {
         id: 1,
-        title: 'Analytics Report',
+        title: '어제와 오늘의 전력사용량을 비교하고 싶을땐?',
         icon: 'uil-notes',
-        redirectTo: '/'
+        redirectTo: '/dashboard/crm'
     },
     {
         id: 2,
-        title: 'How can I help you?',
+        title: '전력사용량을 예측하고 싶을 땐?',
         icon: 'uil-life-ring',
-        redirectTo: '/'
+        redirectTo: '/dashboard/crm'
     },
     {
         id: 3,
         icon: 'uil-cog',
-        title: 'User profile settings',
-        redirectTo: '/'
+        title: '요금제을 제안받고 싶을땐?',
+        redirectTo: '/dashboard/Analytics'
     }, {
         id: 4,
         icon: 'uil-user',
-        title: 'Erwin Brown (UI)',
-        redirectTo: '/'
-    },
-    {
-        id: 5,
-        icon: 'uil-user',
-        title: 'Jacob Deo (Dev)',
-        redirectTo: '/'
+        title: '나의 그린포인트는 얼마나 쌓였을까??',
+        redirectTo: '/dashboard/Project'
     }
 ];
 
@@ -158,7 +152,7 @@ class Topbar extends Component<TopbarProps> {
     };
 
     render() {
-        const hideLogo = this.props.hideLogo || false;
+        const hideLogo = this.props.hideLogo || true;
         const navCssClasses = this.props.navCssClasses || '';
         const containerCssClasses = !hideLogo ? 'container-fluid' : '';
         return (

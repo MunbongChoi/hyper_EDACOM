@@ -78,7 +78,7 @@ class DetachedLayout extends Component<DetachedLayoutProps, DetachedLayoutState>
                                 isMenuOpened={this.state.isMenuOpened}
                                 isCondensed={isCondensed}
                                 isLight={isLight}
-                                hideLogo={true}
+                                hideLogo={false}
                             />
                         </Suspense>
 

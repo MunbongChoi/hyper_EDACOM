@@ -1,6 +1,5 @@
 /*global kakao */
 import React, { useEffect } from 'react';
-
 const { kakao } = window;
 
 const MapContainer = () => {
@@ -26,9 +25,10 @@ const MapContainer = () => {
 
     return (
         <div id='myMap' style={{
-            width: '1380px',
+            width: '100%',
             height: '340px'
         }}></div>
+
     );
 }
 

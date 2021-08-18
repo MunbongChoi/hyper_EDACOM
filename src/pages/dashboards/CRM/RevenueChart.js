@@ -36,7 +36,7 @@ const RevenueChart = () => {
         yaxis: [
             {
                 title: {
-                    text: '전력사용량 (kW)',
+                    text: '전력사용량 [kW]',
                 },
                 min: 0,
             },

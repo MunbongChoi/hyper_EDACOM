@@ -103,7 +103,7 @@ class LeftSidebar extends Component<LeftSidebarProps> {
                     {!hideLogo && (<React.Fragment>
                         <Link to="/" className="logo text-center logo-light">
                             <span className="logo-lg">
-                                <img src={isLight ? logoDark : logo} alt="logo" height="180" />
+                                <img src={isLight ? logoDark : logo} alt="logo" height="140" />
                             </span>
                             <span className="logo-sm">
                                 <img src={isLight ? logoSm : logoDarkSm} alt="logo" height="16" />

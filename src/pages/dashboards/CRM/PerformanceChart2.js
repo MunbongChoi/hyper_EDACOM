@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, {useEffect} from 'react';
 import Chart from 'react-apexcharts';
 import {
     Card,
@@ -84,6 +84,19 @@ const PerformanceChart = () => {
         //     data: [230, 220, 200, 190, 200, 205, 210, 280, 250, 200, 210, 240],
         // },
     ];
+    useEffect(() => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify()//전달할 변수)
+        };
+        fetch('http://127.0.0.1:5000/generate', requestOptions)
+            .then((response) => {
+                response.json().then(function(data) {
+                    //원하는코드
+            })
+        })
+    },);
 
     return (
         <Card>

@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, {useEffect} from 'react';
 import Chart from 'react-apexcharts';
 import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, UncontrolledAlert} from 'reactstrap';
 
@@ -76,6 +76,19 @@ const PerformanceChart = () => {
             data: [89, 80],
         },
     ];
+    useEffect(() => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify()//전달할 변수)
+        };
+        fetch('http://127.0.0.1:5000/generate', requestOptions)
+            .then((response) => {
+                response.json().then(function(data) {
+                    //원하는코드
+            })
+        })
+    },);
 
     return (
         <Card>
@@ -97,7 +110,22 @@ const PerformanceChart = () => {
                 <UncontrolledAlert color="info">
                     고객님의 전력사용패턴을 분석하여 나온 요금제 그래프입니다.
                 </UncontrolledAlert>
-
+                <div className="chart-content-bg">
+                    <div className="row text-center">
+                        <div className="col-md-6">
+                            <p className="text-muted mb-0 mt-3">계시별 요금제</p>
+                            <h2 className="font-weight-normal mb-3">
+                                <span>42,025원</span>
+                            </h2>
+                        </div>
+                        <div className="col-md-6">
+                            <p className="text-muted mb-0 mt-3">누진제</p>
+                            <h2 className="font-weight-normal mb-3">
+                                <span>74,651원</span>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
                 <Chart
                     options={apexBarChartOpts}
                     series={apexBarChartData}

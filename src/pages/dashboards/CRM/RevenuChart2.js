@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, {useEffect} from 'react';
 import Chart from 'react-apexcharts';
 import {
     Card,
@@ -17,7 +17,7 @@ const RevenueChart = () => {
             height: 400,
             type: 'line',
             toolbar: {
-                show: false,
+                show: true,
             },
         },
         stroke: {
@@ -83,12 +83,20 @@ const RevenueChart = () => {
             type: 'area',
             data: [30, 24, 26, 23, 23, 22, 20, 30, 35, 37, 40, 50, 55, 55, 60, 70, 60, 50, 47, 45, 40, 37, 35, 33],
         },
-        // {
-        //     name: '과거 전력사용량',
-        //     type: 'line',
-        //     data: [55, 69, 45, 61, 43, 54, 37, 52, 44, 61, 43, 56, 50, 30],
-        // },
     ];
+    useEffect(() => {
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify()//전달할 변수)
+        };
+        fetch('http://127.0.0.1:5000/generate', requestOptions)
+            .then((response) => {
+                response.json().then(function(data) {
+                    //원하는코드
+            })
+        })
+    },);
 
     return (
         <Card>
@@ -111,24 +119,6 @@ const RevenueChart = () => {
                 <UncontrolledAlert color="info">
                     과거 전력사용량 데이터들을 분석하여 내일의 전력사용량을 예측한 결과입니다.
                 </UncontrolledAlert>
-
-                {/*<div className="chart-content-bg">*/}
-                {/*    <div className="row text-center">*/}
-                {/*        <div className="col-md-6">*/}
-                {/*            <p className="text-muted mb-0 mt-3">Current Month</p>*/}
-                {/*            <h2 className="font-weight-normal mb-3">*/}
-                {/*                <span>$42,025</span>*/}
-                {/*            </h2>*/}
-                {/*        </div>*/}
-                {/*        <div className="col-md-6">*/}
-                {/*            <p className="text-muted mb-0 mt-3">Previous Month</p>*/}
-                {/*            <h2 className="font-weight-normal mb-3">*/}
-                {/*                <span>$74,651</span>*/}
-                {/*            </h2>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-
                 <Chart
                     options={apexLineChartWithLables}
                     series={apexLineChartWithLablesData}

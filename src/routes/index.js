@@ -157,8 +157,6 @@ const authRoutes = {
     ],
 };
 
-
-
 // flatten the list of all nested routes
 const flattenRoutes = routes => {
     let flatRoutes = [];

@@ -31,10 +31,12 @@ const ProjectDashboardPage = () => {
 
             <Statistics />
             <Row>
-                <Col xl={5}>
+                <Col xl={12}>
                     <MapContainer />
                 </Col>
-                <Col xl={7}>
+            </Row>
+            <Row>
+                <Col xl={12}>
                     <Basictable />
                 </Col>
             </Row>

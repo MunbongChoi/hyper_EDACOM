@@ -15,7 +15,7 @@ import {
 const RevenueChart = () => {
     const apexLineChartWithLables = {
         chart: {
-            height: 364,
+            height: 400,
             type: 'line',
             dropShadow: {
                 enabled: true,
@@ -73,7 +73,7 @@ const RevenueChart = () => {
         {
             name: 'Current Week',
             data: [0.57, 0.45, 0.27, 0.21, 0.12, 0.1, 0.1, 0.11, 0.13, 0.15, 0.56, 0.36, 0.47, 0.51, 0.52, 0.51, 0.88, 0.94, 0.53 ],
-        },
+        }
         // {
         //     name: 'Previous Week',
         //     data: [10, 20, 15, 25, 20, 30, 20, 10, 20, 15, 25, 20, 30, 30],

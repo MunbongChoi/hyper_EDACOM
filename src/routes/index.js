@@ -20,35 +20,6 @@ const AnalyticsDashboard = React.lazy(() => import('../pages/dashboards/Analytic
 const ProjectDashboard = React.lazy(() => import('../pages/dashboards/Project'));
 // apps
 
-// - ecommece pages
-
-// chat
-
-// social
-// tasks
-
-
-// - email
-
-// pages
-
-
-// - other
-
-// uikit
-
-
-
-// forms
-
-// charts
-
-// tables
-
-// maps
-
-// handle auth and authorization
-
 const PrivateRoute = ({ component: Component, roles, ...rest }) => (
     <Route
         {...rest}
@@ -86,10 +57,15 @@ const dashboardRoutes = {
     icon: 'uil-home-alt',
     header: 'Navigation',
     children: [
+
         {
-            path: '/dashboard/analytics',
-            name: '요금제',
-            component: AnalyticsDashboard,
+            path: '/dashboard/ecommerce',
+            name: 'Home',
+            badge: {
+                variant: 'success',
+                text: '3',
+            },
+            component: EcommerceDashboard,
             route: PrivateRoute,
         },
         {
@@ -99,13 +75,9 @@ const dashboardRoutes = {
             route: PrivateRoute,
         },
         {
-            path: '/dashboard/ecommerce',
-            name: 'Home',
-            badge: {
-                variant: 'success',
-                text: '3',
-            },
-            component: EcommerceDashboard,
+            path: '/dashboard/analytics',
+            name: '요금제',
+            component: AnalyticsDashboard,
             route: PrivateRoute,
         },
         {

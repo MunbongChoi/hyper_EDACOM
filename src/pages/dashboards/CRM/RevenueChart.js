@@ -28,7 +28,7 @@ const RevenueChart = () => {
             type: 'solid',
             opacity: [0, 1],
         },
-        labels: ['00', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13'],
+        labels: ['00h', '01h', '02h', '03h', '04h', '05h', '06h', '07h', '08h', '09h', '10h', '11h', '12h', '13h'],
         markers: {
             size: 0.5,
         },
@@ -36,7 +36,7 @@ const RevenueChart = () => {
         yaxis: [
             {
                 title: {
-                    text: '전력사용량 (kWh)',
+                    text: '전력사용량 (kW)',
                 },
                 min: 0,
             },

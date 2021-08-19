@@ -2,6 +2,7 @@
 import React, {useEffect} from 'react';
 import Chart from 'react-apexcharts';
 import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, UncontrolledAlert} from 'reactstrap';
+import axios from "axios";
 
 const PerformanceChart = () => {
     const apexBarChartOpts = {
@@ -76,7 +77,7 @@ const PerformanceChart = () => {
             data: [89, 80],
         },
     ];
-    useEffect(() => {
+useEffect(() => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

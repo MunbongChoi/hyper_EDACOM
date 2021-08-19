@@ -4,21 +4,26 @@ import { Row, Col } from 'reactstrap';
 
 import StatisticsWidget from '../../../components/StatisticsWidget';
 import {Map} from "google-maps-react";
+import axios from "axios";
 
 const Statistics = () => {
     useEffect(() => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify()//전달할 변수)
-        };
-        fetch('http://127.0.0.1:5000/generate', requestOptions)
-            .then((response) => {
-                response.json().then(function(data) {
-                    //원하는코드
-            })
-        })
-    },);
+                        const requestOptions = {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify()//전달할 변수)
+                        };
+                        fetch('http://127.0.0.1:5000/generate', requestOptions)
+                            .then((response) => {
+                                response.json().then(function(data) {
+                                    //원하는코드
+                            })
+                        })
+                    },);
+
+
+
+
     return (
         <React.Fragment>
             <Row>

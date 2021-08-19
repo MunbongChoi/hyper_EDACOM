@@ -3,9 +3,10 @@ import React, {useEffect} from 'react';
 import { Row, Col } from 'reactstrap';
 
 import StatisticsWidget from '../../../components/StatisticsWidget';
+import axios from "axios";
 
 const Statistics = () => {
-    useEffect(() => {
+useEffect(() => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

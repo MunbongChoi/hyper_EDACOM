@@ -1,9 +1,10 @@
 // @flow
 import React, {useEffect} from 'react';
 import {Card, CardBody, Button, Table, Progress, UncontrolledAlert} from 'reactstrap';
+import axios from "axios";
 
 const Channels = () => {
-    useEffect(() => {
+ useEffect(() => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

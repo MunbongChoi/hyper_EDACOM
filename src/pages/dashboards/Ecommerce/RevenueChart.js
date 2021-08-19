@@ -12,6 +12,8 @@ import {
     DropdownItem, UncontrolledAlert,
 } from 'reactstrap';
 
+import axios from 'axios'
+
 const RevenueChart = () => {
     const apexLineChartWithLables = {
         chart: {
@@ -93,7 +95,6 @@ const RevenueChart = () => {
         })
     },);
 
-
     return (
         <Card>
             <CardBody>
@@ -114,38 +115,6 @@ const RevenueChart = () => {
                 <UncontrolledAlert color="info">
                     실시간으로 고객님의 전력사용량을 보여줍니다.
                 </UncontrolledAlert>
-
-                {/*<div className="chart-content-bg">*/}
-                {/*    <Row className="text-center">*/}
-                {/*        <Col className="col-md-6">*/}
-                {/*            <p className="text-muted mb-0 mt-3">금일 총 전력 사용량</p>*/}
-                {/*            <h2 className="font-weight-normal mb-3">*/}
-                {/*                <small className="mdi mdi-checkbox-blank-circle text-primary align-middle mr-1"></small>*/}
-                {/*                <span>X[kWh]</span>*/}
-                {/*            </h2>*/}
-                {/*        </Col>*/}
-
-                {/*        /!*<Col className="col-md-6">*!/*/}
-                {/*        /!*    <p className="text-muted mb-0 mt-3">금일 총 전력사용량</p>*!/*/}
-                {/*        /!*    <h2 className="font-weight-normal mb-3">*!/*/}
-                {/*        /!*        <small className="mdi mdi-checkbox-blank-circle text-success align-middle mr-1"></small>*!/*/}
-                {/*        /!*        <span>Y[kWh]</span>*!/*/}
-                {/*        /!*    </h2>*!/*/}
-                {/*        /!*</Col>*!/*/}
-                {/*    </Row>*/}
-                {/*</div>*/}
-
-                <div className="dash-item-overlay d-none d-md-block">
-                    {/*<h5>금일 현재까지의 전력사용량 : X</h5>*/}
-                    {/*<p className="text-muted font-13 mb-3 mt-2">*/}
-                    {/*    Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam*/}
-                    {/*    rhoncus....*/}
-                    {/*</p>*/}
-                    {/*<a href="/" className="btn btn-outline-primary">*/}
-                    {/*    View Statements*/}
-                    {/*    <i className="mdi mdi-arrow-right ml-2"></i>*/}
-                    {/*</a>*/}
-                </div>
 
                 <Chart
                     options={apexLineChartWithLables}

@@ -10,6 +10,7 @@ import {
     DropdownItem,
     UncontrolledAlert
 } from 'reactstrap';
+import axios from "axios";
 
 const RevenueChart = () => {
     const apexLineChartWithLables = {
@@ -84,7 +85,7 @@ const RevenueChart = () => {
             data: [30, 24, 26, 23, 23, 22, 20, 30, 35, 37, 40, 50, 55, 55, 60, 70, 60, 50, 47, 45, 40, 37, 35, 33],
         },
     ];
-    useEffect(() => {
+useEffect(() => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -97,7 +98,6 @@ const RevenueChart = () => {
             })
         })
     },);
-
     return (
         <Card>
             <CardBody>

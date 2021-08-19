@@ -10,6 +10,7 @@ import {
     DropdownItem,
     UncontrolledAlert
 } from 'reactstrap';
+import axios from "axios";
 
 const PerformanceChart = () => {
     const apexBarChartOpts = {
@@ -84,7 +85,7 @@ const PerformanceChart = () => {
         //     data: [230, 220, 200, 190, 200, 205, 210, 280, 250, 200, 210, 240],
         // },
     ];
-    useEffect(() => {
+useEffect(() => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -97,6 +98,7 @@ const PerformanceChart = () => {
             })
         })
     },);
+
 
     return (
         <Card>

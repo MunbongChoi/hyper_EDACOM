@@ -1,9 +1,10 @@
 // @flow
 import React,{useEffect} from 'react';
 import { Card, CardBody, Row, Col } from 'reactstrap';
+import axios from "axios";
 
 const Statistics = () => {
-    useEffect(() => {
+useEffect(() => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

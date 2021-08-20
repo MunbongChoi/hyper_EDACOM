@@ -63,7 +63,7 @@ class Login extends Component {
                                         <div className="card-header pt-4 pb-4 text-center bg-primary">
                                             <Link to="/">
                                                 <span>
-                                                    <img src={logo} alt="" height="80" />
+                                                    <img src={logo} alt="" height="150" />
                                                 </span>
                                             </Link>
                                         </div>

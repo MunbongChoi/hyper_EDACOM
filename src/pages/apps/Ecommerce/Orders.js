@@ -212,42 +212,36 @@ const Orders = () => {
     const columns = [
         {
             dataField: 'order_id',
-            text: 'Order ID',
+            text: '상품',
             sort: true,
             formatter: OrderColumn,
         },
         {
             dataField: 'order_date',
-            text: 'Date',
+            text: '원산지',
             sort: false,
             formatter: OrderDateColumn,
         },
         {
             dataField: 'payment_status',
-            text: 'Payment Status',
+            text: '판매처',
             sort: false,
             formatter: PaymentStatusColumn,
         },
         {
             dataField: 'total',
-            text: 'Total',
+            text: '원가',
             sort: false,
         },
         {
             dataField: 'payment_method',
-            text: 'Payment Method',
+            text: '할인가',
             sort: false,
         },
         {
-            dataField: 'order_status',
-            text: 'Status',
-            sort: false,
-            formatter: StatusColumn,
-        },
-        {
-            dataField: 'action',
+            dataField: '장바구니',
             isDummyColumn: true,
-            text: 'Action',
+            text: '장바구니',
             sort: false,
             classes: 'table-action',
             formatter: ActionColumn,
@@ -279,7 +273,7 @@ const Orders = () => {
         <React.Fragment>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'eCommerce', path: '/apps/ecommerce/orders' },
+                    { label: '특산물장터', path: '/apps/ecommerce/orders' },
                     { label: 'Orders', path: '/apps/ecommerce/orders', active: true },
                 ]}
                 title={'Orders'}

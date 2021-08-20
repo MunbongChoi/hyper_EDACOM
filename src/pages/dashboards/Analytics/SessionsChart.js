@@ -1,5 +1,5 @@
 // @flow
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
 import {
     Card,
@@ -99,19 +99,17 @@ const SessionsChart = () => {
             data: [10.7, 9.14, 9.11, 9.39, 10.56, 8.02, 8.92, 9.13, 10.78, 9.5, 8.84, 10.32, 9.37, 10.2, 10.9, 9.21, 9.95, 8.13, 8.28, 10.02, 9.54, 9.49, 10.21, 9.22],
         },
     ];
-useEffect(() => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify()//전달할 변수)
-        };
-        fetch('http://127.0.0.1:5000/generate', requestOptions)
-            .then((response) => {
-                response.json().then(function(data) {
-                    //원하는코드
-            })
-        })
-    },);
+ const [getMessage, setGetMessage] = useState({})
+
+  useEffect(()=>{
+    axios.get('http://localhost:5000/flask/hello').then(response => {
+      console.log("SUCCESS", response)
+      setGetMessage(response)
+    }).catch(error => {
+      console.log(error)
+    })
+
+  }, [])
 
     return (
         <Card>

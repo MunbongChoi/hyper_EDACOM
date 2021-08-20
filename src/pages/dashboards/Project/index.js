@@ -14,6 +14,7 @@ import Basictable from "./Basic2";
 import StepChart from "../../charts/Brite/StepChart";
 import DonutChart from "../../charts/Apex/DonutChart";
 import MapContainer from "./MapContainer";
+import Cart from "../../apps/Ecommerce/Cart";
 ///////////////////////////////////////////
 import GoogleMaps2 from "./GoogleMaps2";
 ////////////////////////////////////////
@@ -47,6 +48,11 @@ const ProjectDashboardPage = () => {
 
                 <Col xl={6}>
                     <DonutChart />
+                </Col>
+            </Row>
+            <Row>
+                <Col xl={12}>
+                   <Cart/>
                 </Col>
             </Row>
         </React.Fragment>

@@ -1,24 +1,22 @@
 // @flow
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Row, Col } from 'reactstrap';
 
 import StatisticsWidget from '../../../components/StatisticsWidget';
 import axios from "axios";
 
 const Statistics = () => {
-useEffect(() => {
-        const requestOptions = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify()//전달할 변수)
-        };
-        fetch('http://127.0.0.1:5000/generate', requestOptions)
-            .then((response) => {
-                response.json().then(function(data) {
-                    //원하는코드
-            })
-        })
-    },);
+ const [getMessage, setGetMessage] = useState({})
+
+  useEffect(()=>{
+    axios.get('http://localhost:5000/flask/hello').then(response => {
+      console.log("SUCCESS", response)
+      setGetMessage(response)
+    }).catch(error => {
+      console.log(error)
+    })
+
+  }, [])
     return (
         <React.Fragment>
             <Row>

@@ -273,37 +273,7 @@ const Tables = () => {
                 <Col xl={12}>
                     <BasicTable />
                 </Col>
-
-                {/*<Col xl={6}>*/}
-                {/*    <InverseTable />*/}
-                {/*</Col>*/}
             </Row>
-
-            {/*<Row>*/}
-            {/*    <Col xl={6}>*/}
-            {/*        <StripedRowsTable />*/}
-            {/*    </Col>*/}
-
-            {/*    <Col xl={6}>*/}
-            {/*        <BorderedTable />*/}
-            {/*    </Col>*/}
-            {/*</Row>*/}
-
-            {/*<Row>*/}
-            {/*    <Col xl={6}>*/}
-            {/*        <HoverableTable />*/}
-            {/*    </Col>*/}
-
-            {/*    <Col xl={6}>*/}
-            {/*        <SmallTable />*/}
-            {/*    </Col>*/}
-            {/*</Row>*/}
-
-            {/*<Row>*/}
-            {/*    <Col>*/}
-            {/*        <ResponsiveTable />*/}
-            {/*    </Col>*/}
-            {/*</Row>*/}
         </React.Fragment>
     );
 };

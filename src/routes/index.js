@@ -18,6 +18,7 @@ const EcommerceDashboard = React.lazy(() => import('../pages/dashboards/Ecommerc
 const CRMDashboard = React.lazy(() => import('../pages/dashboards/CRM'));
 const AnalyticsDashboard = React.lazy(() => import('../pages/dashboards/Analytics'));
 const ProjectDashboard = React.lazy(() => import('../pages/dashboards/Project'));
+
 // apps
 
 const PrivateRoute = ({ component: Component, roles, ...rest }) => (

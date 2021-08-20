@@ -1,5 +1,5 @@
 // @flow
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
 import {
     Row,
@@ -54,7 +54,7 @@ const RevenueChart = () => {
         colors: ['#8ca4d2', '#0acf97', '#fa5c7c', '#ffbc00'],
         xaxis: {
             type: 'string',
-            categories: ['01h', '02h', '03h', '04h', '05h', '06h', '07h', '08h', '09h', '10h', '11h', '12h', '13h', '14h', '15h', '16h', '17h', '18h', '19h'],
+            categories: ['01h', '02h', '03h', '04h', '05h', '06h', '07h', '08h', '09h', '10h'],
             tooltip: {
                 enabled: false,
             },
@@ -64,51 +64,35 @@ const RevenueChart = () => {
         },
         yaxis: {
             labels: {
-                formatter: function(val) {
+                formatter: function (val) {
                     return val + 'kW';
                 },
             },
         },
     };
 
-    const apexLineChartWithLablesData = [
-    //     useEffect(() => {
-    //     const requestOptions = {
-    //         method: 'POST',
-    //         headers: { 'Content-Type': 'application/json' },
-    //         body: JSON.stringify(name, date)
-    //     };
-    //     fetch('http://127.0.0.1:5000/generate', requestOptions)
-    //         .then((response) => {
-    //             response.json().then(function(data) {
-    //                 //원하는코드
-    //         })
-    //     })
-    // },);
-
+    let apexLineChartWithLablesData = [
         {
             name: 'Current Week',
-            data: [0.57, 0.45, 0.27, 0.21, 0.12, 0.1, 0.1, 0.11, 0.13, 0.15, 0.56, 0.36, 0.47, 0.51, 0.52, 0.51, 0.88, 0.93, 0.53 ],
+            data: [0.57, 0.45, 0.27, 0.21, 0.12, 0.1, 0.1, 0.11, 0.13, 0.15, 0.56, 0.36, 0.47, 0.51, 0.52, 0.51, 0.88, 0.93, 0.53],
         }
-        // {
-        //     name: 'Previous Week',
-        //     data: [10, 20, 15, 25, 20, 30, 20, 10, 20, 15, 25, 20, 30, 30],
-        // },
     ];
+
     useEffect(() => {
         const requestOptions = {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify()//전달할 변수)
-        };
-        fetch('http://localhost:5000/get_data', requestOptions)
-            .then((response) => {
-                response.json().then(function(data) {
-                    //원하는코드
-            })
-        })
-    },);
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(
 
+            )
+        };
+        fetch('http://127.0.0.1:5000/generate/', requestOptions)
+            .then((response) => {
+                response.json().then(function (data) {
+                    console.log(data)
+                })
+            })
+    },);
     return (
         <Card>
             <CardBody>

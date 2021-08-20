@@ -52,7 +52,7 @@ const OrderSummary = props => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Grand Total :</td>
+                        <td>총 금액 :</td>
                         <td>{summary.gross_total}</td>
                     </tr>
                     <tr>

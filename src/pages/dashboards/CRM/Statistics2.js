@@ -22,7 +22,7 @@ const Statistics = () => {
             <Row>
                 <Col lg={6}>
                     <StatisticsWidget
-                        icon="mdi mdi-account-multiple"
+                        icon="mdi mdi-engine-off-outline"
                         description="Number of Customers"
                         title="탄소배출량"
                         stats="36,254"
@@ -36,7 +36,7 @@ const Statistics = () => {
 
                 <Col lg={6}>
                     <StatisticsWidget
-                        icon="mdi mdi-currency-usd"
+                        icon="uil-bolt-alt"
                         description="Revenue"
                         title="미래 전력사용예측량"
                         stats="40kWh"

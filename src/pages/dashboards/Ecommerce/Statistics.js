@@ -28,7 +28,7 @@ const Statistics = () => {
             <Row>
                 <Col xl={6}>
                     <StatisticsWidget
-                        icon="mdi mdi-account-multiple"
+                        icon="mdi mdi-engine-off-outline"
                         description="Number of Customers"
                         title="탄소배출량"
                         stats="0"
@@ -41,7 +41,7 @@ const Statistics = () => {
                 </Col>
                 <Col>
                    <StatisticsWidget
-                        icon="mdi mdi-currency-usd"
+                        icon="mdi mdi-alpha-p-box"
                         description="Revenue"
                         title="적립된 포인트"
                         stats="0P"

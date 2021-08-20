@@ -67,7 +67,7 @@ useEffect(() => {
                                             <h3>
                                                 <span>10그루</span> <i className="mdi mdi-arrow-up text-success"></i>
                                             </h3>
-                                            <p className="text-muted font-15 mb-0">탄소배출량을 나무심은 개수로 환산</p>
+                                            <p className="text-muted font-15 mb-0">나의 등급</p>
                                         </CardBody>
                                     </Card>
                                 </Col>

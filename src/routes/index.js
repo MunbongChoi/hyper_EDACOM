@@ -63,7 +63,7 @@ const dashboardRoutes = {
             path: '/dashboard/ecommerce',
             name: 'Home',
             badge: {
-                
+
             },
             component: EcommerceDashboard,
             route: PrivateRoute,

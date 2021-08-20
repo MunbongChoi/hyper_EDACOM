@@ -77,22 +77,30 @@ const RevenueChart = () => {
             data: [0.57, 0.45, 0.27, 0.21, 0.12, 0.1, 0.1, 0.11, 0.13, 0.15, 0.56, 0.36, 0.47, 0.51, 0.52, 0.51, 0.88, 0.93, 0.53],
         }
     ];
-
+    const [data, setData] = useState({hits:[]})
     useEffect(() => {
-        const requestOptions = {
-            method: 'GET',
-            // headers: {
-            //     'Content-Type': 'application/json'
-            // },
-            body: JSON.stringify()
-        };
-        fetch('http://localhost:5000/show_data', requestOptions)
-            .then((response) => {
-                response.json().then(function (data) {
-                    console.log(data)
-                })
-            })
-    },);
+        async () => {
+            const result = await axios.get(
+                'http://localhost:5000/show_data'
+            )
+        }
+        setData(result.data);
+    },[]);
+    // useEffect(() => {
+    //     const requestOptions = {
+    //         method: 'GET',
+    //         // headers: {
+    //         //     'Content-Type': 'application/json'
+    //         // },
+    //         body: JSON.stringify()
+    //     };
+    //     fetch('http://localhost:5000/show_data', requestOptions)
+    //         .then((response) => {
+    //             response.json().then(function (data) {
+    //                 console.log(data)
+    //             })
+    //         })
+    // },);
     return (
         <Card>
             <CardBody>
@@ -113,13 +121,19 @@ const RevenueChart = () => {
                 <UncontrolledAlert color="info">
                     실시간으로 고객님의 전력사용량을 보여줍니다.
                 </UncontrolledAlert>
-
+                {data.hits.map((item)=>(
                 <Chart
                     options={apexLineChartWithLables}
-                    series={apexLineChartWithLablesData}
+                    series={item}
                     type="line"
                     className="apex-charts mt-3"
                     height={364}
+                    />
+                ))
+
+                }
+                <Chart
+
                 />
             </CardBody>
         </Card>

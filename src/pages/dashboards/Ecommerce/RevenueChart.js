@@ -80,13 +80,15 @@ const RevenueChart = () => {
 
     useEffect(() => {
         const requestOptions = {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(
-
-            )
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin' : 'http://localhost:5000/',
+                'Access-Control-Allow-Credentials' : 'true'
+            },
+            body: JSON.stringify()
         };
-        fetch('http://127.0.0.1:5000/generate/', requestOptions)
+        fetch('http://127.0.0.1:5000/show_data/', requestOptions)
             .then((response) => {
                 response.json().then(function (data) {
                     console.log(data)

@@ -78,16 +78,16 @@ const PerformanceChart = () => {
         },
     ];
  const [getMessage, setGetMessage] = useState({})
-
-  useEffect(()=>{
-    axios.get('http://localhost:5000/hello').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
-
-  }, [])
+  //
+  // useEffect(()=>{
+  //   axios.get('http://localhost:5000/hello').then(response => {
+  //     console.log("SUCCESS", response)
+  //     setGetMessage(response)
+  //   }).catch(error => {
+  //     console.log(error)
+  //   })
+  //
+  // }, [])
     return (
         <Card>
             <CardBody>

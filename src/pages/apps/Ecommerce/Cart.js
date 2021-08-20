@@ -93,7 +93,7 @@ class Cart extends Component {
                     color: 'Brown',
                     price: 99,
                     qty: 2,
-                    total: 198.0,
+                    total: 198.0
                 },
                 {
                     id: 3,

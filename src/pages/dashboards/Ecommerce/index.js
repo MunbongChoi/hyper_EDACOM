@@ -38,9 +38,6 @@ const EcommerceDashboardPage = () => {
                     <Col xl={12}>
                         <RevenueChart />
                     </Col>
-                {/*<Col xl={3}>*/}
-                {/*    <SalesChart />*/}
-                {/*</Col>*/}
             </Row>
 
             <Row>

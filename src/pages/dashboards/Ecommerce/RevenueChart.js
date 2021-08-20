@@ -72,6 +72,20 @@ const RevenueChart = () => {
     };
 
     const apexLineChartWithLablesData = [
+    //     useEffect(() => {
+    //     const requestOptions = {
+    //         method: 'POST',
+    //         headers: { 'Content-Type': 'application/json' },
+    //         body: JSON.stringify(name, date)
+    //     };
+    //     fetch('http://127.0.0.1:5000/generate', requestOptions)
+    //         .then((response) => {
+    //             response.json().then(function(data) {
+    //                 //원하는코드
+    //         })
+    //     })
+    // },);
+
         {
             name: 'Current Week',
             data: [0.57, 0.45, 0.27, 0.21, 0.12, 0.1, 0.1, 0.11, 0.13, 0.15, 0.56, 0.36, 0.47, 0.51, 0.52, 0.51, 0.88, 0.93, 0.53 ],
@@ -87,7 +101,7 @@ const RevenueChart = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify()//전달할 변수)
         };
-        fetch('http://127.0.0.1:5000/generate', requestOptions)
+        fetch('http://localhost:5000/get_data', requestOptions)
             .then((response) => {
                 response.json().then(function(data) {
                     //원하는코드

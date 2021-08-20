@@ -12,7 +12,7 @@ import koreaFlag from './flags/korea.jpg';
 
 const Languages = [
     {
-        name: 'English',
+        name: 'Korean',
         flag: enFlag,
     },
     {
@@ -31,10 +31,6 @@ const Languages = [
         name: 'Russian',
         flag: russiaFlag,
     },
-    {
-        name : 'Korean',
-        flag : koreaFlag,
-    }
 ];
 
 type LanguageDropdownProps = {};

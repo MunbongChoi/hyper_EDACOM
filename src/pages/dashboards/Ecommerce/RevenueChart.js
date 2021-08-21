@@ -113,7 +113,7 @@ const RevenueChart = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">금일 전력 사용량</h4>
+                <h4 className="header-title mb-3">오늘 전력 사용량</h4>
                 <UncontrolledAlert color="info">
                     실시간으로 고객님의 전력사용량을 보여줍니다.
                 </UncontrolledAlert>

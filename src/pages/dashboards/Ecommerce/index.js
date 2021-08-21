@@ -25,7 +25,7 @@ const EcommerceDashboardPage = () => {
                         {/*        </button>*/}
                         {/*    </form>*/}
                         {/*</div>*/}
-                        <h4 className="page-title">Dashboard</h4>
+                        <h4 className="page-title">Home</h4>
                     </div>
                 </Col>
             </Row>

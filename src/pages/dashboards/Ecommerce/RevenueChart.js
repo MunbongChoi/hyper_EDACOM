@@ -1,5 +1,5 @@
 // @flow
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, PropTypes} from 'react';
 import Chart from 'react-apexcharts';
 import {
     Row,
@@ -71,36 +71,33 @@ const RevenueChart = () => {
         },
     };
 
-    let apexLineChartWithLablesData = [
-        {
-            name: 'Current Week',
-            data: [0.57, 0.45, 0.27, 0.21, 0.12, 0.1, 0.1, 0.11, 0.13, 0.15, 0.56, 0.36, 0.47, 0.51, 0.52, 0.51, 0.88, 0.93, 0.53],
-        }
-    ];
-    const [data, setData] = useState({hits:[]})
+    let apexLineChartWithLablesData = {
+        name: "test",
+        data: []
+    }
+
+    const [jsonData, setJson] = useState(apexLineChartWithLablesData)
+
     useEffect(() => {
-        async () => {
-            const result = await axios.get(
-                'http://localhost:5000/show_data'
-            )
+        const requestOptions = {
+            method: 'GET',
+            body: JSON.stringify()
         }
-        setData(result.data);
-    },[]);
-    // useEffect(() => {
-    //     const requestOptions = {
-    //         method: 'GET',
-    //         // headers: {
-    //         //     'Content-Type': 'application/json'
-    //         // },
-    //         body: JSON.stringify()
-    //     };
-    //     fetch('http://localhost:5000/show_data', requestOptions)
-    //         .then((response) => {
-    //             response.json().then(function (data) {
-    //                 console.log(data)
-    //             })
-    //         })
-    // },);
+        fetch('http://localhost:5000/show_data', requestOptions)
+            .then(response => response.json()
+            .then((function (json_data){
+                console.log(json_data['data'])
+                console.log(json_data['name'])
+                console.log(jsonData.name)
+                console.log(jsonData.data)
+                function insert_name() {
+                    setJson(jsonData.data = json_data['data'])
+                }
+                insert_name()
+            })
+        ))
+    },);
+
     return (
         <Card>
             <CardBody>
@@ -115,26 +112,19 @@ const RevenueChart = () => {
                         <DropdownItem>Profit</DropdownItem>
                         <DropdownItem>Action</DropdownItem>
                     </DropdownMenu>
-                </UncontrolledButtonDropdown>
+00                </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">금일 전력 사용량</h4>
                 <UncontrolledAlert color="info">
                     실시간으로 고객님의 전력사용량을 보여줍니다.
                 </UncontrolledAlert>
-                {data.hits.map((item)=>(
                 <Chart
                     options={apexLineChartWithLables}
-                    series={item}
+                    series={jsonData}
                     type="line"
                     className="apex-charts mt-3"
                     height={364}
                     />
-                ))
-
-                }
-                <Chart
-
-                />
             </CardBody>
         </Card>
     );

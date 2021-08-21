@@ -30,7 +30,7 @@ useEffect(() => {
                                         <CardBody className="text-center">
                                             <h3>
                                                 <span>
-                                                    <img src={grade1} alt="" height="50" />
+                                                    <img src={grade1} alt="" height="30" />
                                                 </span>
                                             </h3>
                                             <p className="text-muted font-15 mb-0">나의 등급</p>
@@ -41,9 +41,8 @@ useEffect(() => {
                                 <Col sm={6} xl={3}>
                                     <Card className="card shadow-none m-0 border-left">
                                         <CardBody className="text-center">
-                                            <i className="mdi mdi-alpha-p-box"></i>
                                             <h3>
-                                                <span>29P</span>
+                                                <span>29 P</span>
                                             </h3>
                                             <p className="text-muted font-15 mb-0">Total Point</p>
                                         </CardBody>
@@ -53,11 +52,10 @@ useEffect(() => {
                                 <Col sm={6} xl={3}>
                                     <Card className="card shadow-none m-0 border-left">
                                         <CardBody className="text-center">
-                                            <i className="uil-bolt-alt"></i>
                                             <h3>
-                                                <span>20kWh</span>
+                                                <span>20 kW</span>
                                             </h3>
-                                            <p className="text-muted font-15 mb-0">한달동안 줄인 전력량</p>
+                                            <p className="text-muted font-15 mb-0">전력 사용 변화량</p>
                                         </CardBody>
                                     </Card>
                                 </Col>
@@ -65,11 +63,10 @@ useEffect(() => {
                                 <Col sm={6} xl={3}>
                                     <Card className="card shadow-none m-0 border-left">
                                         <CardBody className="text-center">
-                                            <i className="mdi mdi-engine-off-outline"></i>
                                             <h3>
-                                                <span>31</span>
+                                                <span>31 tCO2 eq.</span>
                                             </h3>
-                                            <p className="text-muted font-15 mb-0">줄어든 탄소배출량 </p>
+                                            <p className="text-muted font-15 mb-0">탄소 배출 변화량 </p>
                                         </CardBody>
                                     </Card>
                                 </Col>

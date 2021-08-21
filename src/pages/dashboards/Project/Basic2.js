@@ -9,10 +9,10 @@ import grade4 from "../../../assets/images/grade4.png";
 // import PageTitle from '../../components/PageTitle';
 
 const records = [
-    { rank: 1, grade: <img src={grade1} alt="" height="20" />, point: '10P', criteria: '200kW' },
-    { rank: 2, grade: <img src={grade2} alt="" height="20" />, point: '5P', criteria: '210kW' },
-    { rank: 3, grade: <img src={grade3} alt="" height="20" />, point: '3P', criteria: '220kW' },
-    { rank: 4, grade: <img src={grade4} alt="" height="20" />, point: '0P', criteria: '230kW' }
+    { rank: 1, grade: <img src={grade1} alt="" height="20" />, point: '10 P', criteria: '200 kW' },
+    { rank: 2, grade: <img src={grade2} alt="" height="20" />, point: '5 P', criteria: '210 kW' },
+    { rank: 3, grade: <img src={grade3} alt="" height="20" />, point: '3 P', criteria: '220 kW' },
+    { rank: 4, grade: <img src={grade4} alt="" height="20" />, point: '0 P', criteria: '230 kW' }
 ];
 
 const BasicTable = () => {
@@ -24,8 +24,8 @@ const BasicTable = () => {
                         <tr>
                             <th>#</th>
                             <th>등급</th>
-                            <th>포인트</th>
-                            <th>전력사용량</th>
+                            <th>지급 포인트</th>
+                            <th>전력 사용량</th>
                         </tr>
                     </thead>
                     <tbody>

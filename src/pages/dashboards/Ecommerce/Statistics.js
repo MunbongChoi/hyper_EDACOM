@@ -28,26 +28,22 @@ const Statistics = () => {
             <Row>
                 <Col xl={6}>
                     <StatisticsWidget
-                        icon="mdi mdi-engine-off-outline"
                         description="Number of Customers"
                         title="탄소배출량"
-                        stats="0"
+                        stats="0.075 tCO2 eq."
                         trend={{
                             textClass: 'text-success',
-                            icon: 'mdi mdi-arrow-up-bold',
                             value: '5.27%',
                             time: 'Since last month',
                         }}></StatisticsWidget>
                 </Col>
                 <Col>
                    <StatisticsWidget
-                        icon="mdi mdi-alpha-p-box"
                         description="Revenue"
-                        title="적립된 포인트"
-                        stats="0P"
+                        title="보유 포인트"
+                        stats="500 P"
                         trend={{
                             textClass: 'text-danger',
-                            icon: 'mdi mdi-arrow-down-bold',
                             value: '7.00%',
                             time: 'Since last month',
                         }}></StatisticsWidget>

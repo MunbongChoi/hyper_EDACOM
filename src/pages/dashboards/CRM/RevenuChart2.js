@@ -112,7 +112,7 @@ const RevenueChart = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">내일의 전력사용량 예측 서비스</h4>
+                <h4 className="header-title mb-3">내일 전력사용량 예측 서비스</h4>
 
                 <UncontrolledAlert color="info">
                     과거 전력사용량 데이터들을 분석하여 내일의 전력사용량을 예측한 결과입니다.

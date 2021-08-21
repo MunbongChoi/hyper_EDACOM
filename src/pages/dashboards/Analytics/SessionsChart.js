@@ -158,7 +158,7 @@ const SessionsChart = () => {
                 <h4 className="header-title mb-3">예측된 한달 전력사용량</h4>
 
                 <UncontrolledAlert color="info">
-                    X달동안의 고객님의 한달 간 전력사용량을 분석하여 나온 결과입니다.
+                    남은 일 수는 예측모델을 통해 계산된 값입니다.
                 </UncontrolledAlert>
                 <Chart
                     options={apexBarChartOpts}

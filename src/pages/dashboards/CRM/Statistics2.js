@@ -22,30 +22,28 @@ const Statistics = () => {
             <Row>
                 <Col lg={6}>
                     <StatisticsWidget
-                        icon="mdi mdi-engine-off-outline"
                         description="Number of Customers"
                         title="탄소배출량"
-                        stats="36,254"
+                        stats="0.075 tCO2 eq."
                         trend={{
                             textClass: 'text-success',
-                            icon: 'mdi mdi-arrow-up-bold',
                             value: '5.27%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}>
+                    </StatisticsWidget>
                 </Col>
 
                 <Col lg={6}>
                     <StatisticsWidget
-                        icon="uil-bolt-alt"
                         description="Revenue"
-                        title="미래 전력사용예측량"
-                        stats="40kWh"
+                        title="내일 전력사용예측량"
+                        stats="40 kW"
                         trend={{
                             textClass: 'text-danger',
-                            icon: 'mdi mdi-arrow-down-bold',
                             value: '7.00%',
                             time: 'Since last month',
-                        }}></StatisticsWidget>
+                        }}>
+                    </StatisticsWidget>
                 </Col>
             </Row>
 

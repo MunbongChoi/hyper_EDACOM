@@ -104,14 +104,14 @@ const PerformanceChart = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">금일 요금제 비교 서비스</h4>
+                <h4 className="header-title mb-3">이번 달 요금제 추천 서비스</h4>
                 <UncontrolledAlert color="info">
                     고객님의 전력사용패턴을 분석하여 나온 요금제 그래프입니다.
                 </UncontrolledAlert>
                 <div className="chart-content-bg">
                     <div className="row text-center">
                         <div className="col-md-6">
-                            <p className="text-muted mb-0 mt-3">계시별 요금제</p>
+                            <p className="text-muted mb-0 mt-3">TOU</p>
                             <h2 className="font-weight-normal mb-3">
                                 <span>42,025원</span>
                             </h2>

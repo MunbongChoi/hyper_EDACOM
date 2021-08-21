@@ -134,7 +134,6 @@ type TopbarProps = {
 class Topbar extends Component<TopbarProps> {
     constructor(props) {
         super(props);
-
         this.handleRightSideBar = this.handleRightSideBar.bind(this);
     }
 
@@ -188,8 +187,8 @@ class Topbar extends Component<TopbarProps> {
                                 <ProfileDropdown
                                     profilePic={profilePic}
                                     menuItems={ProfileMenus}
-                                    username={'Dominic Keller'}
-                                    userTitle={'Founder'}
+                                    username={'Newton'}
+                                    userTitle={'Energy_Sol'}
                                 />
                             </li>
                         </ul>

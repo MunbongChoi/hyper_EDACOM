@@ -9,23 +9,11 @@ const UserProfile = () => {
         <React.Fragment>
             <Card>
                 <CardBody>
-                    <UncontrolledDropdown className="float-right">
-                        <DropdownToggle tag="button" className="btn btn-sm btn-link no-arrow card-drop p-0">
-                            <i className="mdi mdi-dots-horizontal"></i>
-                        </DropdownToggle>
-
-                        <DropdownMenu right>
-                            <DropdownItem>Edit Profile</DropdownItem>
-                            <DropdownItem>Settings</DropdownItem>
-                        </DropdownMenu>
-                    </UncontrolledDropdown>
-
-                    <Media>
+                    <Media>s
                         <img className="d-flex align-self-start rounded mr-2" src={avatar} alt="" height="48" />
-
                         <Media body>
-                            <h5 className="mt-1 mb-0">Dominic Keller</h5>
-                            <p className="mb-1 mt-1 text-muted">California, USA</p>
+                            <h5 className="mt-1 mb-0">Newton</h5>
+                            <p className="mb-1 mt-1 text-muted">Energy_Sol, Korea</p>
                         </Media>
                     </Media>
 

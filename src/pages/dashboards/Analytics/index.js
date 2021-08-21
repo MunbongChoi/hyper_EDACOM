@@ -21,14 +21,14 @@ const AnalyticsDashboardPage = () => {
                 <Col>
                     <div className="page-title-box">
                         <div className="page-title-right">
-                            <form className="form-inline">
-                                <div className="form-group">
-                                    <HyperDatepicker />
-                                </div>
-                                <button className="btn btn-primary ml-2">
-                                    <i className="mdi mdi-autorenew"></i>
-                                </button>
-                            </form>
+                            {/*<form className="form-inline">*/}
+                            {/*    <div className="form-group">*/}
+                            {/*        <HyperDatepicker />*/}
+                            {/*    </div>*/}
+                            {/*    <button className="btn btn-primary ml-2">*/}
+                            {/*        <i className="mdi mdi-autorenew"></i>*/}
+                            {/*    </button>*/}
+                            {/*</form>*/}
                         </div>
                         <h4 className="page-title">요금제 비교 서비스</h4>
                     </div>

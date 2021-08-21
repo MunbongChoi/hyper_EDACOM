@@ -36,7 +36,7 @@ const RevenueChart = () => {
             padding: {
                 left: 0,
                 right: 0,
-            },
+            }
         },
         dataLabels: {
             enabled: false,
@@ -54,7 +54,7 @@ const RevenueChart = () => {
         colors: ['#8ca4d2', '#0acf97', '#fa5c7c', '#ffbc00'],
         xaxis: {
             type: 'string',
-            categories: ['01h', '02h', '03h', '04h', '05h', '06h', '07h', '08h', '09h', '10h'],
+            categories: [],
             tooltip: {
                 enabled: false,
             },
@@ -71,31 +71,28 @@ const RevenueChart = () => {
         },
     };
 
-    let apexLineChartWithLablesData = {
-        name: "test",
+    let apexLineChartWithLablesData = [{
+        name: '',
         data: []
-    }
+    }]
 
-    const [jsonData, setJson] = useState(apexLineChartWithLablesData)
-
+    const [jsonData] = useState(apexLineChartWithLablesData)
+    const [jsonDatay] = useState(apexLineChartWithLables)
     useEffect(() => {
         const requestOptions = {
             method: 'GET',
             body: JSON.stringify()
         }
         fetch('http://localhost:5000/show_data', requestOptions)
-            .then(response => response.json()
-            .then((function (json_data){
-                console.log(json_data['data'])
-                console.log(json_data['name'])
-                console.log(jsonData.name)
-                console.log(jsonData.data)
-                function insert_name() {
-                    setJson(jsonData.data = json_data['data'])
-                }
-                insert_name()
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                jsonData[0].data = response.data
+                jsonData[0].name = response.name
+                jsonDatay.xaxis.categories = response.time
+                console.log(jsonData)
+                console.log(jsonDatay)
             })
-        ))
     },);
 
     return (
@@ -112,7 +109,7 @@ const RevenueChart = () => {
                         <DropdownItem>Profit</DropdownItem>
                         <DropdownItem>Action</DropdownItem>
                     </DropdownMenu>
-00                </UncontrolledButtonDropdown>
+                </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">금일 전력 사용량</h4>
                 <UncontrolledAlert color="info">
@@ -124,7 +121,7 @@ const RevenueChart = () => {
                     type="line"
                     className="apex-charts mt-3"
                     height={364}
-                    />
+                />
             </CardBody>
         </Card>
     );

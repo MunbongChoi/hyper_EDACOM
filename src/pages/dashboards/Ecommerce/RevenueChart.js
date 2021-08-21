@@ -15,6 +15,7 @@ import {
 import axios from 'axios'
 
 const RevenueChart = () => {
+
     const apexLineChartWithLables = {
         chart: {
             height: 400,
@@ -94,6 +95,7 @@ const RevenueChart = () => {
                 console.log(jsonDatay)
             })
     },);
+
 
     return (
         <Card>

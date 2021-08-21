@@ -102,7 +102,6 @@ export function configureFakeBackend() {
 
                     return;
                 }
-
                 // pass through any requests not handled above
                 realFetch(url, opts).then(response => resolve(response));
             }, 500);

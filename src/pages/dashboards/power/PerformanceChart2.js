@@ -81,35 +81,37 @@ const PerformanceChart = () => {
 
     ];
     const [jsonData] = useState(apexBarChartData)
+    //
+    // useEffect(() => {
+    //     const requestOptions = {
+    //         method: 'GET',
+    //         body: JSON.stringify()
+    //     }
+    //     fetch('http://localhost:5000/year_used', requestOptions)
+    //         .then(response => response.json())
+    //         .then(response => {
+    //             jsonData[0].data = response.data
+    //             console.log(jsonData)
+    //         })
+    // },);
 
-    useEffect(() => {
+    async function fetch_JSON() {
         const requestOptions = {
             method: 'GET',
             body: JSON.stringify()
         }
-        fetch('http://localhost:5000/year_used', requestOptions)
-            .then(response => response.json())
-            .then(response => {
-                jsonData[0].data = response.data
-                console.log(jsonData)
-            })
-    },);
+      const response = await fetch('http://localhost:5000/year_used', requestOptions);
+      const movies = await response.json();
+      return movies;
+    }
+
+    fetch_JSON().then(response => {
+        jsonData[0].data = response.data
+    });
+
     return (
         <Card>
             <CardBody>
-                <UncontrolledButtonDropdown className="float-right">
-                    <DropdownToggle tag="button" className="btn btn-link arrow-none card-drop p-0">
-                        <i className="mdi mdi-dots-vertical"></i>
-                    </DropdownToggle>
-
-                    <DropdownMenu right>
-                        <DropdownItem>Sales Report</DropdownItem>
-                        <DropdownItem>Export Report</DropdownItem>
-                        <DropdownItem>Profit</DropdownItem>
-                        <DropdownItem>Action</DropdownItem>
-                    </DropdownMenu>
-                </UncontrolledButtonDropdown>
-
                 <h4 className="header-title mb-3">1년간 전력사용량</h4>
 
                 <UncontrolledAlert color="info">
@@ -118,7 +120,7 @@ const PerformanceChart = () => {
 
                 <Chart
                     options={apexBarChartOpts}
-                    series={apexBarChartData}
+                    series={jsonData}
                     type="bar"
                     className="apex-charts"
                     height={260}

@@ -60,7 +60,8 @@ class Routes extends Component {
                                         path={route.path}
                                         roles={route.roles}
                                         exact={route.exact}
-                                        component={route.component}></route.route>
+                                        component={route.component}>
+                                    </route.route>
                                 )
                             );
                         })}

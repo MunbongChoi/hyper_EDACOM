@@ -150,8 +150,8 @@ class Cart extends Component {
             <React.Fragment>
                 <PageTitle
                     breadCrumbItems={[
-                        { label: 'eCommerce', path: '/apps/ecommerce/shopping-cart' },
-                        { label: 'Cart', path: '/apps/ecommerce/shopping-cart', active: true },
+                        { label: 'eCommerce', path: '/apps/temp/shopping-cart' },
+                        { label: 'Cart', path: '/apps/temp/shopping-cart', active: true },
                     ]}
                     title={'Shopping Cart'}
                 />

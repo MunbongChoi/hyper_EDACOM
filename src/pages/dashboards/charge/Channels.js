@@ -46,11 +46,6 @@ const Channels = () => {
     //         return jsonData[0].name + "가 "+jsonData[1].data - jsonData[0].data + "만큼 더 저렴합니다."
     //
     // }
-    const tou = () =>
-    {
-        return  jsonData[1].data
-    }
-
     return (
         <Card>
             <CardBody>
@@ -87,7 +82,6 @@ const Channels = () => {
                             <th>
                                 {select_name()}
                             </th>
-                            <th></th>
                         </tr>
                     </tbody>
                 </Table>

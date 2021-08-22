@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 import PageTitle from '../../../components/PageTitle';
 import RevenueChart from './RevenueChart';
-import Statistics2 from './/Statistics2';
+import Statistics2 from './Statistics2';
 import RevenuChart2 from './RevenuChart2.js';
 import PerformanceChart2 from './PerformanceChart2.js';
 
@@ -12,13 +12,11 @@ const CRMDashboardPage = () => {
         <React.Fragment>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Dashboard', path: '/dashboard/crm' },
-                    { label: '전력사용량', path: '/dashboard/crm', active: true },
+                    { label: 'Dashboard', path: '/dashboard/power' },
+                    { label: '전력사용량', path: '/dashboard/power', active: true },
                 ]}
                 title={'전력사용량'}
             />
-
-
             <Row>
                 <Col xl={12}>
                     <RevenueChart />

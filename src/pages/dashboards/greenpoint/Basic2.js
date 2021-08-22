@@ -49,8 +49,6 @@ const BasicTable = () => {
 const Tables = () => {
     return (
         <React.Fragment>
-
-
             <Row>
                 <Col xl={12}>
                     <BasicTable />

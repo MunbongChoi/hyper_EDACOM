@@ -48,7 +48,7 @@ const RevenueChart = () => {
             y: {
                 formatter: function(y) {
                     if (typeof y !== 'undefined') {
-                        return y.toFixed(0) + 'k';
+                        return y.toFixed(3) + 'k';
                     }
                     return y;
                 },
@@ -81,35 +81,32 @@ const RevenueChart = () => {
         {
             name: '내일 전력사용량',
             type: 'area',
-            data: [30, 24, 26, 23, 23, 22, 20, 30, 35, 37, 40, 50, 55, 55, 60, 70, 60, 50, 47, 45, 40, 37, 35, 33],
+            data: [],
         },
     ];
- const [getMessage, setGetMessage] = useState({})
+    const [jsonData] = useState(apexLineChartWithLablesData)
+    const [jsonDatay] = useState(apexLineChartWithLables)
+  //
+  // useEffect(()=>{
+  //   axios.get('http://localhost:5000/predict_day').then(response => {
+  //     console.log("SUCCESS", response)
+  //     setGetMessage(response)
+  //   }).catch(error => {
+  //     console.log(error)
+  //   })
+  //}, [])
+    async function fetch_JSON() {
+      const response = await fetch('http://localhost:5000/predict_day');
+      const movies = await response.json();
+      return movies;
+    }
 
-  useEffect(()=>{
-    axios.get('http://localhost:5000/flask/hello').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
-
-  }, [])
+    fetch_JSON().then(response => {
+        jsonData[0].data = response.data
+    });
     return (
         <Card>
             <CardBody>
-                <UncontrolledButtonDropdown className="float-right">
-                    <DropdownToggle tag="button" className="btn btn-link arrow-none card-drop p-0">
-                        <i className="mdi mdi-dots-vertical"></i>
-                    </DropdownToggle>
-
-                    <DropdownMenu right>
-                        <DropdownItem>Sales Report</DropdownItem>
-                        <DropdownItem>Export Report</DropdownItem>
-                        <DropdownItem>Profit</DropdownItem>
-                        <DropdownItem>Action</DropdownItem>
-                    </DropdownMenu>
-                </UncontrolledButtonDropdown>
 
                 <h4 className="header-title mb-3">내일 전력사용량 예측 서비스</h4>
 
@@ -117,8 +114,8 @@ const RevenueChart = () => {
                     과거 전력사용량 데이터들을 분석하여 내일의 전력사용량을 예측한 결과입니다.
                 </UncontrolledAlert>
                 <Chart
-                    options={apexLineChartWithLables}
-                    series={apexLineChartWithLablesData}
+                    options={jsonDatay}
+                    series={jsonData}
                     type="line"
                     className="apex-charts"
                     height={336}

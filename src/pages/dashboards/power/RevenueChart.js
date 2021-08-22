@@ -103,6 +103,7 @@ const RevenueChart = () => {
                 console.log(response)
                 jsonData[0].data = response.yesterday_data
                 jsonData[0].name = '어제 ' + response.name
+
                 jsonData[1].data = response.today_data
                 jsonData[1].name = '오늘 ' + response.name
                 jsonDatay.labels = response.time
@@ -111,22 +112,10 @@ const RevenueChart = () => {
                 console.log(jsonDatay)
             })
     },);
+
     return (
         <Card>
             <CardBody>
-                <UncontrolledButtonDropdown className="float-right">
-                    <DropdownToggle tag="button" className="btn btn-link arrow-none card-drop p-0">
-                        <i className="mdi mdi-dots-vertical"></i>
-                    </DropdownToggle>
-
-                    <DropdownMenu right>
-                        <DropdownItem>Sales Report</DropdownItem>
-                        <DropdownItem>Export Report</DropdownItem>
-                        <DropdownItem>Profit</DropdownItem>
-                        <DropdownItem>Action</DropdownItem>
-                    </DropdownMenu>
-                </UncontrolledButtonDropdown>
-
                 <h4 className="header-title mb-3">
                     전력사용량 비교 분석 서비스
                 </h4>

@@ -15,7 +15,7 @@ const ProjectDashboardPage = () => {
         <React.Fragment>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Dashboard', path: '/' },
+                    { label: 'Dashboard', path: '/dashboard/Greenpoint' },
                     { label: 'Greenpoint', path: '/dashboard/Greenpoint', active: true },
                 ]}
                 title={'GreenPoint'}

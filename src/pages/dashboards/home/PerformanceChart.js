@@ -93,19 +93,6 @@ const PerformanceChart = () => {
     return (
         <Card>
             <CardBody>
-                <UncontrolledButtonDropdown className="float-right">
-                    <DropdownToggle tag="button" className="btn btn-link arrow-none card-drop p-0">
-                        <i className="mdi mdi-dots-vertical"></i>
-                    </DropdownToggle>
-
-                    <DropdownMenu right>
-                        <DropdownItem>Sales Report</DropdownItem>
-                        <DropdownItem>Export Report</DropdownItem>
-                        <DropdownItem>Profit</DropdownItem>
-                        <DropdownItem>Action</DropdownItem>
-                    </DropdownMenu>
-                </UncontrolledButtonDropdown>
-
                 <h4 className="header-title mb-3">이번 달 요금제 추천 서비스</h4>
                 <UncontrolledAlert color="info">
                     실시간 이번 달 요금을 실시간으로 불러오는 중입니다.

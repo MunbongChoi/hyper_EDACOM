@@ -30,7 +30,7 @@ const RevenueChart = () => {
             type: 'solid',
             opacity: [0, 1],
         },
-        labels: ['00h', '01h', '02h', '03h', '04h', '05h', '06h', '07h', '08h', '09h', '10h', '11h', '12h', '13h'],
+        labels: [],
         markers: {
             size: 0.5,
         },
@@ -90,17 +90,29 @@ const RevenueChart = () => {
             data: [0.35, 0.48, 0.28, 0.2, 0.23, 0.25, 0.27, 0.15, 0.13, 0.28, 0.35, 0.31, 0.35, 0.42],
         },
     ];
- const [getMessage, setGetMessage] = useState({})
 
-  useEffect(()=>{
-    axios.get('http://localhost:5000/flask/hello').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
+    const [jsonData] = useState(apexLineChartWithLablesData)
+    const [jsonDatay] = useState(apexLineChartWithLables)
+    useEffect(() => {
+        const requestOptions = {
+            method: 'GET',
+            body: JSON.stringify()
+        }
+        fetch('http://localhost:5000/compare_yesterday', requestOptions)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                jsonData[0].data = response.yesterday_data
+                jsonData[0].name = response.name
 
-  }, [])
+                jsonData[1].data = response.today_data
+                jsonData[1].name = response.name
+                jsonDatay.labels = response.time
+
+                console.log(jsonData)
+                console.log(jsonDatay)
+            })
+    },);
     return (
         <Card>
             <CardBody>
@@ -122,24 +134,6 @@ const RevenueChart = () => {
                 <UncontrolledAlert color="info">
                     실시간으로 어제의 전력사용량과 오늘 전력사용량을 비교해줍니다.
                 </UncontrolledAlert>
-
-                {/*<div className="chart-content-bg">*/}
-                {/*    <div className="row text-center">*/}
-                {/*        <div className="col-md-6">*/}
-                {/*            <p className="text-muted mb-0 mt-3">Current Month</p>*/}
-                {/*            <h2 className="font-weight-normal mb-3">*/}
-                {/*                <span>$42,025</span>*/}
-                {/*            </h2>*/}
-                {/*        </div>*/}
-                {/*        <div className="col-md-6">*/}
-                {/*            <p className="text-muted mb-0 mt-3">Previous Month</p>*/}
-                {/*            <h2 className="font-weight-normal mb-3">*/}
-                {/*                <span>$74,651</span>*/}
-                {/*            </h2>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
-
                 <Chart
                     options={apexLineChartWithLables}
                     series={apexLineChartWithLablesData}

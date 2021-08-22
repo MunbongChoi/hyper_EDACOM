@@ -26,7 +26,7 @@ const Channels = () => {
                 <Table responsive className="table-sm table-centered mb-0 font-14">
                     <thead className="thead-light">
                         <tr>
-                           <th>추천 드리는 요금제</th>
+                           <th>요금제</th>
                             <th>요금비교</th>
                             <th style={{ width: '40%' }}>&nbsp;</th>
                         </tr>
@@ -35,6 +35,21 @@ const Channels = () => {
                         <tr>
                             <td>TOU요금제</td>
                             <td>x원</td>
+                            <td>
+                                <Progress value={65} style={{ height: '3px'}}/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>누진제</td>
+                            <td>y원</td>
+                            <td>
+                                <Progress value={45} style={{ height: '3px'}} color="info"/>
+                            </td>
+                        </tr>
+                        <tr>
+                           <th>추천요금제</th>
+                            <th>TOU</th>
+                            <th>TOU가 x-y원 경제적입니다.</th>
                         </tr>
                     </tbody>
                 </Table>

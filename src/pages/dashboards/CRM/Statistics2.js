@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import { Row, Col } from 'reactstrap';
 
 import StatisticsWidget from '../../../components/StatisticsWidget';
-import axios from "axios";
 
 const Statistics = () => {
      const apexLineChartWithLablesData = [{

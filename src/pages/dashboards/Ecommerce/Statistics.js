@@ -3,8 +3,6 @@ import React, {useEffect} from 'react';
 import {Row, Col, UncontrolledAlert} from 'reactstrap';
 
 import StatisticsWidget from '../../../components/StatisticsWidget';
-import {Map} from "google-maps-react";
-import axios from "axios";
 import {useState} from "react";
 
 const Statistics = () => {

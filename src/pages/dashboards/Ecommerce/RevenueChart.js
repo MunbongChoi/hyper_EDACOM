@@ -11,9 +11,6 @@ import {
     DropdownMenu,
     DropdownItem, UncontrolledAlert,
 } from 'reactstrap';
-
-import axios from 'axios'
-
 const RevenueChart = () => {
 
     const apexLineChartWithLables = {

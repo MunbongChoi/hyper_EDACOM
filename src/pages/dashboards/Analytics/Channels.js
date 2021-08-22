@@ -1,8 +1,6 @@
 // @flow
 import React, {useEffect, useState} from 'react';
 import {Card, CardBody, Button, Table, Progress, UncontrolledAlert} from 'reactstrap';
-import axios from "axios";
-
 const Channels = () => {
  const apexBarChartData = [{
         name : '누진제'

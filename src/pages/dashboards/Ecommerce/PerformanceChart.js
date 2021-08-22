@@ -2,7 +2,6 @@
 import React, {useEffect} from 'react';
 import Chart from 'react-apexcharts';
 import { Card, CardBody, UncontrolledButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem, UncontrolledAlert} from 'reactstrap';
-import axios from "axios";
 import {useState} from "react";
 const PerformanceChart = () => {
     const apexBarChartOpts = {

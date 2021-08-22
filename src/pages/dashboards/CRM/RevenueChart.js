@@ -10,7 +10,6 @@ import {
     DropdownItem,
     UncontrolledAlert
 } from 'reactstrap';
-import axios from "axios";
 
 
 const RevenueChart = () => {

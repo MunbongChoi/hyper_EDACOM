@@ -10,8 +10,6 @@ import {
     DropdownItem,
     UncontrolledAlert
 } from 'reactstrap';
-import axios from "axios";
-
 const PerformanceChart = () => {
     const apexBarChartOpts = {
         grid: {
@@ -51,7 +49,7 @@ const PerformanceChart = () => {
         },
         colors: ['#bacd59', '#e3eaef'],
         xaxis: {
-            categories: ['8월', '7월', '6월', '5월', '4월', '3월', '2월', '1월', '12월', '11월', '10월', '9월'],
+            categories: ['5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월', '1월', '2월', '3월', '4월'],
             axisBorder: {
                 show: false,
             },
@@ -59,7 +57,7 @@ const PerformanceChart = () => {
         yaxis: {
             labels: {
                 formatter: function(val) {
-                    return val + 'kWh';
+                    return val + 'kW';
                 },
             },
         },
@@ -69,7 +67,7 @@ const PerformanceChart = () => {
         tooltip: {
             y: {
                 formatter: function(val) {
-                    return '' + val + 'kWh';
+                    return '' + val + 'kW';
                 },
             },
         },
@@ -80,7 +78,7 @@ const PerformanceChart = () => {
             name: '전력사용량',
             data: {
                 formatter: function(val) {
-                    return '' + val + 'kWh'
+                    return '' + val + 'kW'
             }
             },
         },

@@ -51,7 +51,7 @@ const PerformanceChart = () => {
         },
         colors: ['#bacd59', '#e3eaef'],
         xaxis: {
-            categories: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec' ,'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+            categories: ['8월', '7월', '6월', '5월', '4월', '3월', '2월', '1월', '12월', '11월', '10월', '9월'],
             axisBorder: {
                 show: false,
             },
@@ -78,25 +78,29 @@ const PerformanceChart = () => {
     const apexBarChartData = [
         {
             name: '전력사용량',
-            data: [230, 220, 200, 190, 200, 205, 210, 280, 250, 200, 210, 240],
+            data: {
+                formatter: function(val) {
+                    return '' + val + 'kWh'
+            }
+            },
         },
-        // {
-        //     name: 'Projection',
-        //     data: [230, 220, 200, 190, 200, 205, 210, 280, 250, 200, 210, 240],
-        // },
+
     ];
- const [getMessage, setGetMessage] = useState({})
+    const [jsonData] = useState(apexBarChartData)
 
-  useEffect(()=>{
-    axios.get('http://localhost:5000/flask/hello').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
-
-  }, [])
-
+    useEffect(() => {
+        const requestOptions = {
+            method: 'GET',
+            body: JSON.stringify()
+        }
+        fetch('http://localhost:5000/year_used', requestOptions)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                jsonData.data = response.data
+                console.log(jsonData)
+            })
+    },);
     return (
         <Card>
             <CardBody>
@@ -121,7 +125,7 @@ const PerformanceChart = () => {
 
                 <Chart
                     options={apexBarChartOpts}
-                    series={apexBarChartData}
+                    series={jsonData}
                     type="bar"
                     className="apex-charts"
                     height={260}

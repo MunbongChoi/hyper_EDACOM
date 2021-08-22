@@ -4,17 +4,55 @@ import {Card, CardBody, Button, Table, Progress, UncontrolledAlert} from 'reacts
 import axios from "axios";
 
 const Channels = () => {
- const [getMessage, setGetMessage] = useState({})
+ const apexBarChartData = [{
+        name : '누진제'
+    },
+    {
+        name:'TOU'
+    }]
+    const [jsonData] = useState(apexBarChartData)
 
-  useEffect(()=>{
-    axios.get('http://localhost:5000/flask/hello').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
 
-  }, [])
+
+    function getTitle(){
+      const response = fetch("https://jsonplaceholder.typicode.com/posts");
+      return response.then(res => res.json());
+    }
+    async function myfetch(){
+     let response = await fetch('http://localhost:5000/tou');
+     let myJson = await response.json()
+        console.log(response)
+        jsonData[0].data = myJson.price[0]
+        jsonData[1].data = myJson.price[1]
+        jsonData.name = '가격'
+        // jsonDatay.xaxis.categories = response.time
+        console.log(jsonData)
+        // console.log(jsonDatay)
+    }
+
+    myfetch()
+
+    const select_name = () =>
+    {
+        if (jsonData[0].data > jsonData[1].data)
+            return jsonData[0].name
+        else
+            return jsonData[1].name
+
+    }
+    // const compare = () =>
+    // {
+    //     if (jsonData[0].data > jsonData[1].data)
+    //         return jsonData[1].name + "가 "+jsonData[1].data - jsonData[0].data + "만큼 더 저렴합니다."
+    //     else
+    //         return jsonData[0].name + "가 "+jsonData[1].data - jsonData[0].data + "만큼 더 저렴합니다."
+    //
+    // }
+    const tou = () =>
+    {
+        return  jsonData[1].data
+    }
+
     return (
         <Card>
             <CardBody>
@@ -34,22 +72,24 @@ const Channels = () => {
                     <tbody>
                         <tr>
                             <td>TOU요금제</td>
-                            <td>x원</td>
+                            <td>{jsonData[0].data}</td>
                             <td>
-                                <Progress value={65} style={{ height: '3px'}}/>
+                                <Progress value={100} style={{ height: '3px'}}/>
                             </td>
                         </tr>
                         <tr>
                             <td>누진제</td>
-                            <td>y원</td>
+                            <td>{jsonData[1].data}</td>
                             <td>
-                                <Progress value={45} style={{ height: '3px'}} color="info"/>
+                                <Progress value={0} style={{ height: '3px'}} color="info"/>
                             </td>
                         </tr>
                         <tr>
                            <th>추천요금제</th>
-                            <th>TOU</th>
-                            <th>TOU가 x-y원 경제적입니다.</th>
+                            <th>
+                                {select_name()}
+                            </th>
+                            <th></th>
                         </tr>
                     </tbody>
                 </Table>

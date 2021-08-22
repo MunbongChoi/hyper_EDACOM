@@ -17,52 +17,32 @@ const CartSummary = props => {
     return (
         <React.Fragment>
             <div className="border p-3 mt-4 mt-lg-0 rounded">
-                <h4 className="header-title mb-3">Order Summary</h4>
+                <h4 className="header-title mb-3">계산서</h4>
 
                 <div className="table-responsive">
                     <table className="table mb-0">
                         <tbody>
                             <tr>
-                                <td>Grand Total :</td>
-                                <td>${summary.gross_total.toFixed(2)}</td>
+                                <td>총 금액 :</td>
+                                <td>9900원</td>
                             </tr>
                             <tr>
-                                <td>Discount : </td>
-                                <td>-${summary.discount.toFixed(2)}</td>
+                                <td>포인트 할인 금액 : </td>
+                                <td>-1000원</td>
                             </tr>
                             <tr>
-                                <td>Shipping Charge :</td>
-                                <td>${summary.shipping_charge.toFixed(2)}</td>
+                                <td>배달 금액 :</td>
+                                <td>2000원</td>
                             </tr>
                             <tr>
-                                <td>Estimated Tax : </td>
-                                <td>${summary.tax.toFixed(2)}</td>
-                            </tr>
-                            <tr>
-                                <th>Total :</th>
-                                <th>${summary.net_total.toFixed(2)}</th>
+                                <th>결제 금액 :</th>
+                                <th>10900원</th>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-
-            <div className="alert alert-warning mt-3" role="alert">
-                Use coupon code <strong>HYPBM</strong> and get 10% discount!
-            </div>
-
             <div className="input-group mt-3">
-                <input
-                    type="text"
-                    className="form-control form-control-light"
-                    placeholder="Coupon code"
-                    aria-label="Recipient's username"
-                />
-                <div className="input-group-append">
-                    <button className="btn btn-light" type="button">
-                        Apply
-                    </button>
-                </div>
             </div>
         </React.Fragment>
     );
@@ -78,41 +58,41 @@ class Cart extends Component {
                     id: 1,
                     image: productImg2,
                     name: '거창 꿀사과',
-                    size: '3kg',
-                    color: 'Light Green',
-                    price: 10000,
+                    size: '거창군',
+                    color: '과일꾼',
+                    price: 9900,
                     qty: 1,
-                    total: 743.3,
+                    total: 9900,
                 },
                 {
                     id: 2,
                     image: productImg4,
-                    name: '수박',
-                    size: 'Small',
-                    color: 'Brown',
-                    price: 99,
-                    qty: 2,
-                    total: 198.0
+                    name: '단양 어상천수박',
+                    size: '단양군',
+                    color: '곰곰',
+                    price: 25390,
+                    qty: 0,
+                    total: 0
                 },
                 {
                     id: 3,
                     image: productImg3,
-                    name: '복숭아',
-                    size: 'Medium',
-                    color: 'Green',
-                    price: 49.99,
-                    qty: 3,
-                    total: 499.9,
+                    name: '털 복숭아',
+                    size: '경상북도',
+                    color: '보배농장',
+                    price: 28900,
+                    qty: 0,
+                    total: 0,
                 },
                 {
                     id: 4,
                     image: productImg1,
                     name: '포도',
-                    size: 'Large',
-                    color: 'Orange',
-                    price: 129.99,
-                    qty: 1,
-                    total: 129.99,
+                    size: '김천시',
+                    color: '페르메',
+                    price: 18900,
+                    qty: 0,
+                    total: 0,
                 },
             ],
             summary: {
@@ -153,7 +133,6 @@ class Cart extends Component {
      * Adjust the cart
      */
     _adjustCart = items => {
-        // calculate gross and other total
         var newGrossTotal = 0;
         for (const item of items) {
             newGrossTotal += item.total;
@@ -187,10 +166,10 @@ class Cart extends Component {
                                             <table className="table table-borderless table-centered mb-0">
                                                 <thead className="thead-light">
                                                     <tr>
-                                                        <th>Product</th>
-                                                        <th>Price</th>
-                                                        <th>Quantity</th>
-                                                        <th>Total</th>
+                                                        <th>상품</th>
+                                                        <th>가격</th>
+                                                        <th>개수</th>
+                                                        <th>총 가격</th>
                                                         <th style={{ width: '50px' }}></th>
                                                     </tr>
                                                 </thead>
@@ -213,14 +192,14 @@ class Cart extends Component {
                                                                         </Link>
                                                                         <br />
                                                                         <small className="mr-2">
-                                                                            <b>Size:</b> {item.size}{' '}
+                                                                            <b>원산지:</b> {item.size}{' '}
                                                                         </small>
                                                                         <small>
-                                                                            <b>Color:</b> {item.color}{' '}
+                                                                            <b>판매처:</b> {item.color}{' '}
                                                                         </small>
                                                                     </p>
                                                                 </td>
-                                                                <td>${item.price.toFixed(2)}</td>
+                                                                <td>{item.price.toFixed(2)}원</td>
                                                                 <td>
                                                                     <input
                                                                         type="number"
@@ -234,7 +213,7 @@ class Cart extends Component {
                                                                         }}
                                                                     />
                                                                 </td>
-                                                                <td>${item.total.toFixed(2)}</td>
+                                                                <td>{item.total.toFixed(2)}원</td>
                                                                 <td>
                                                                     <Link
                                                                         to="/"
@@ -252,23 +231,8 @@ class Cart extends Component {
                                                 </tbody>
                                             </table>
                                         </div>
-
-                                        <div className="mt-3">
-                                            <label htmlFor="example-textarea">Add a Note:</label>
-                                            <textarea
-                                                className="form-control"
-                                                id="example-textarea"
-                                                rows="3"
-                                                placeholder="Write some note.."></textarea>
-                                        </div>
-
                                         <Row className="mt-4">
                                             <Col sm={6}>
-                                                <a
-                                                    href="/"
-                                                    className="btn text-muted d-none d-sm-inline-block btn-link font-weight-semibold">
-                                                    <i className="mdi mdi-arrow-left"></i> Continue Shopping{' '}
-                                                </a>
                                             </Col>
                                             <Col sm={6}>
                                                 <div className="text-sm-right">

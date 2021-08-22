@@ -70,24 +70,27 @@ const PerformanceChart = () => {
     const apexBarChartData = [
         {
             name: 'Actual',
-            data: [44000, 46000],
-        },
-        {
-            name: 'Projection',
-            data: [89, 80],
-        },
+            data: []
+        }
     ];
- const [getMessage, setGetMessage] = useState({})
-  //
-  // useEffect(()=>{
-  //   axios.get('http://localhost:5000/hello').then(response => {
-  //     console.log("SUCCESS", response)
-  //     setGetMessage(response)
-  //   }).catch(error => {
-  //     console.log(error)
-  //   })
-  //
-  // }, [])
+    const [jsonData] = useState(apexBarChartData)
+    useEffect(() => {
+        const requestOptions = {
+            method: 'GET',
+            body: JSON.stringify()
+        }
+        fetch('http://localhost:5000/tou', requestOptions)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                jsonData[0].data = response.price
+                jsonData[0].name = '가격'
+                // jsonDatay.xaxis.categories = response.time
+                console.log(jsonData)
+                // console.log(jsonDatay)
+            })
+    },);
+
     return (
         <Card>
             <CardBody>
@@ -106,27 +109,11 @@ const PerformanceChart = () => {
 
                 <h4 className="header-title mb-3">이번 달 요금제 추천 서비스</h4>
                 <UncontrolledAlert color="info">
-                    고객님의 전력사용패턴을 분석하여 나온 요금제 그래프입니다.
+                    실시간 이번 달 요금을 실시간으로 불러오는 중입니다.
                 </UncontrolledAlert>
-                <div className="chart-content-bg">
-                    <div className="row text-center">
-                        <div className="col-md-6">
-                            <p className="text-muted mb-0 mt-3">TOU</p>
-                            <h2 className="font-weight-normal mb-3">
-                                <span>42,025원</span>
-                            </h2>
-                        </div>
-                        <div className="col-md-6">
-                            <p className="text-muted mb-0 mt-3">누진제</p>
-                            <h2 className="font-weight-normal mb-3">
-                                <span>74,651원</span>
-                            </h2>
-                        </div>
-                    </div>
-                </div>
                 <Chart
                     options={apexBarChartOpts}
-                    series={apexBarChartData}
+                    series={jsonData}
                     type="bar"
                     className="apex-charts"
                     height={260}

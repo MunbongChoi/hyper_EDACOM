@@ -40,7 +40,7 @@ const RevenueChart = () => {
                 title: {
                     text: '전력사용량 [kW]',
                 },
-                min: 0,
+               min: 0,
             },
         ],
         tooltip: {
@@ -78,7 +78,7 @@ const RevenueChart = () => {
         ],
     };
 
-    const apexLineChartWithLablesData = [
+    let apexLineChartWithLablesData = [
         {
             name: '금일 전력사용량',
             type: 'area',
@@ -133,11 +133,10 @@ const RevenueChart = () => {
                 </h4>
                 <UncontrolledAlert color="info">
                     실시간으로 어제의 전력사용량과 오늘 전력사용량을 비교해줍니다.
-
                 </UncontrolledAlert>
                 <Chart
-                    options={apexLineChartWithLables}
-                    series={apexLineChartWithLablesData}
+                    options={jsonDatay}
+                    series={jsonData}
                     type="line"
                     className="apex-charts"
                     height={336}

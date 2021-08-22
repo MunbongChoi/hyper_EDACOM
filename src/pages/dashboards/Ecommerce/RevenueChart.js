@@ -96,7 +96,6 @@ const RevenueChart = () => {
             })
     },);
 
-
     return (
         <Card>
             <CardBody>
@@ -118,7 +117,7 @@ const RevenueChart = () => {
                     실시간으로 고객님의 전력사용량을 보여줍니다.
                 </UncontrolledAlert>
                 <Chart
-                    options={apexLineChartWithLables}
+                    options={jsonDatay}
                     series={jsonData}
                     type="line"
                     className="apex-charts mt-3"

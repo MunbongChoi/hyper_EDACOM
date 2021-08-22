@@ -4,20 +4,11 @@ import {Row, Col, Card, CardBody} from 'reactstrap';
 
 import PageTitle from '../../../components/PageTitle';
 import Statistics from './Statistics';
-import Status from './Status';
-import Tasks from './Tasks';
-import TasksChart from './TasksChart';
-import Activity from './Activity';
-import Calendar from './Calendar';
-///////////////////////////////////
 import Basictable from "./Basic2";
-import StepChart from "../../charts/Brite/StepChart";
-import DonutChart from "../../charts/Apex/DonutChart";
+import StepChart from "./StepChart";
+import DonutChart from "./DonutChart";
 import MapContainer from "./MapContainer";
-import Cart from "../../apps/Ecommerce/Cart";
-///////////////////////////////////////////
-import GoogleMaps2 from "./GoogleMaps2";
-////////////////////////////////////////
+import Cart from "./Cart";
 const ProjectDashboardPage = () => {
     return (
 

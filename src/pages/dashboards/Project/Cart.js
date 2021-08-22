@@ -72,7 +72,6 @@ const CartSummary = props => {
 class Cart extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             items: [
                 {

@@ -6,17 +6,24 @@ import StatisticsWidget from '../../../components/StatisticsWidget';
 import axios from "axios";
 
 const Statistics = () => {
- const [getMessage, setGetMessage] = useState({})
+     const apexLineChartWithLablesData = [{
+        data:''
+    }]
+const [jsonData] = useState(apexLineChartWithLablesData)
 
-  useEffect(()=>{
-    axios.get('http://localhost:5000/flask/hello').then(response => {
-      console.log("SUCCESS", response)
-      setGetMessage(response)
-    }).catch(error => {
-      console.log(error)
-    })
-
-  }, [])
+    useEffect(() => {
+        const requestOptions = {
+            method: 'GET',
+            body: JSON.stringify()
+        }
+        fetch('http://localhost:5000/CO2_emission', requestOptions)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response)
+                jsonData.data = response.tCO2.toFixed(3) +' tCO2_emission eq.'
+                console.log(jsonData)
+            })
+    },);
     return (
         <React.Fragment>
             <Row>
@@ -24,12 +31,7 @@ const Statistics = () => {
                     <StatisticsWidget
                         description="Number of Customers"
                         title="탄소배출량"
-                        stats="0.075 tCO2 eq."
-                        trend={{
-                            textClass: 'text-success',
-                            value: '5.27%',
-                            time: 'Since last month',
-                        }}>
+                        stats= {jsonData.data}>
                     </StatisticsWidget>
                 </Col>
 
@@ -37,12 +39,7 @@ const Statistics = () => {
                     <StatisticsWidget
                         description="Revenue"
                         title="내일 전력사용예측량"
-                        stats="40 kW"
-                        trend={{
-                            textClass: 'text-danger',
-                            value: '7.00%',
-                            time: 'Since last month',
-                        }}>
+                        stats="40 kW">
                     </StatisticsWidget>
                 </Col>
             </Row>

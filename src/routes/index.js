@@ -14,10 +14,10 @@ const ForgetPassword = React.lazy(() => import('../pages/auth/ForgetPassword'));
 const Confirm = React.lazy(() => import('../pages/auth/Confirm'));
 // dashboard
 
-const EcommerceDashboard = React.lazy(() => import('../pages/dashboards/Ecommerce'));
-const CRMDashboard = React.lazy(() => import('../pages/dashboards/CRM'));
-const AnalyticsDashboard = React.lazy(() => import('../pages/dashboards/Analytics'));
-const ProjectDashboard = React.lazy(() => import('../pages/dashboards/Project'));
+const EcommerceDashboard = React.lazy(() => import('../pages/dashboards/home'));
+const CRMDashboard = React.lazy(() => import('../pages/dashboards/power'));
+const AnalyticsDashboard = React.lazy(() => import('../pages/dashboards/charge'));
+const ProjectDashboard = React.lazy(() => import('../pages/dashboards/greenpoint' ));
 
 // apps
 
@@ -60,7 +60,7 @@ const dashboardRoutes = {
     children: [
 
         {
-            path: '/dashboard/ecommerce',
+            path: '/dashboard/home',
             name: 'Home',
             badge: {
 
@@ -69,19 +69,19 @@ const dashboardRoutes = {
             route: PrivateRoute,
         },
         {
-            path: '/dashboard/crm',
+            path: '/dashboard/power',
             name: '전력사용량',
             component: CRMDashboard,
             route: PrivateRoute,
         },
         {
-            path: '/dashboard/analytics',
+            path: '/dashboard/charge',
             name: '요금제',
             component: AnalyticsDashboard,
             route: PrivateRoute,
         },
         {
-            path: '/dashboard/project',
+            path: '/dashboard/greenpoint',
             name: '그린포인트',
             component: ProjectDashboard,
             route: PrivateRoute,

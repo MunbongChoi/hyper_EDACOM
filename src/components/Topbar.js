@@ -109,18 +109,18 @@ const SearchResults = [
         id: 2,
         title: '내일의 전력량을 알고 싶을땐?',
         icon: 'uil-life-ring',
-        redirectTo: '/dashboard/crm'
+        redirectTo: '/dashboard/power'
     },
     {
         id: 3,
         icon: 'uil-cog',
         title: '요금제을 제안받고 싶을땐?',
-        redirectTo: '/dashboard/Analytics'
+        redirectTo: '/dashboard/charge'
     }, {
         id: 4,
         icon: 'uil-user',
         title: '나의 그린포인트는 얼마나 쌓였을까??',
-        redirectTo: '/dashboard/Project'
+        redirectTo: '/dashboard/greenpoint'
     }
 ];
 

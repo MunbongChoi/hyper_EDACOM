@@ -49,7 +49,7 @@ const RevenueChart = () => {
             y: {
                 formatter: function(y) {
                     if (typeof y !== 'undefined') {
-                        return y.toFixed(0) + 'kWh';
+                        return y.toFixed(5) + 'kWh';
                     }
                     return y;
                 },
@@ -82,12 +82,12 @@ const RevenueChart = () => {
         {
             name: '금일 전력사용량',
             type: 'area',
-            data: [0.33, 0.44, 0.25, 0.17, 0.29, 0.25, 0.28, 0.19, 0.12, 0.3, 0.36, 0.34, 0.37, 0.39],
+            data: [],
         },
         {
             name: '과거 전력사용량',
             type: 'line',
-            data: [0.35, 0.48, 0.28, 0.2, 0.23, 0.25, 0.27, 0.15, 0.13, 0.28, 0.35, 0.31, 0.35, 0.42],
+            data: [],
         },
     ];
 
@@ -103,10 +103,9 @@ const RevenueChart = () => {
             .then(response => {
                 console.log(response)
                 jsonData[0].data = response.yesterday_data
-                jsonData[0].name = response.name
-
+                jsonData[0].name = '어제 ' + response.name
                 jsonData[1].data = response.today_data
-                jsonData[1].name = response.name
+                jsonData[1].name = '오늘 ' + response.name
                 jsonDatay.labels = response.time
 
                 console.log(jsonData)
@@ -129,10 +128,12 @@ const RevenueChart = () => {
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
 
-                <h4 className="header-title mb-3">전력사용량 비교 분석 서비스</h4>
-
+                <h4 className="header-title mb-3">
+                    전력사용량 비교 분석 서비스
+                </h4>
                 <UncontrolledAlert color="info">
                     실시간으로 어제의 전력사용량과 오늘 전력사용량을 비교해줍니다.
+
                 </UncontrolledAlert>
                 <Chart
                     options={apexLineChartWithLables}
